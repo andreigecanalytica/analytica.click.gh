@@ -49,7 +49,7 @@ jobs:
     - name: Run npm build
       run: pnpm run build
 
-    - uses:  'phips28/gh-action-bump-version@master'
+    - uses:  'phips28/gh-action-bump-version@v9.1.6'
       name:  'Automated Version Bump'
       id: 'version-bump'
       env:
