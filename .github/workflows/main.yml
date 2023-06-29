@@ -49,20 +49,11 @@ jobs:
     - name: Run npm build
       run: pnpm run build
 
-    - uses:  'phips28/gh-action-bump-version@master'
-      name:  'Automated Version Bump'
-      id: 'version-bump'
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        GITHUB_ACTOR: andreigecanalytica
-      with:
-        commit-message: 'CI: bumps version to {{version}} [skip ci]'
-
     - name: Release
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: >-
-        gh release create ${{ steps.version-bump.outputs.newTag }}
+        gh release create 1
         --generate-notes
         --title "Version ${{ github.ref_name }}"
         action.yml package.json dist/*
