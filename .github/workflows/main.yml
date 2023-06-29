@@ -7,6 +7,7 @@ on:
     branches: [ main ]
     paths:
       - 'src/**'
+      - 'action.yml'
       - '.github/workflows/main.yml'
 
 jobs:
