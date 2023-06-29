@@ -54,6 +54,5 @@ jobs:
       id: version-bump
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        PACKAGEJSON_DIR:  'packages/analytica.click.gh-build'
       with:
         commit-message: 'CI: bumps version to {{version}} [skip ci]'
