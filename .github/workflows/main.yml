@@ -53,6 +53,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: >-
-        gh release create ${{ github.ref_name }} *
+        gh release create ${{ github.ref_name }}
+        "action.yml,package.json,dist/*"
         --generate-notes
         --title "Version ${{ github.ref_name }}"
