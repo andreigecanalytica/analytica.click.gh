@@ -49,11 +49,14 @@ jobs:
     - name: Run npm build
       run: pnpm run build
 
-    - uses:  'phips28/gh-action-bump-version@v8.0.18'
+    - uses:  'phips28/gh-action-bump-version@master'
       name:  'Automated Version Bump'
       id: 'version-bump'
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_ACTOR: andreigecanalytica
+      with:
+        commit-message: 'CI: bumps version to {{version}} [skip ci]'
 
     - name: Release
       env:
