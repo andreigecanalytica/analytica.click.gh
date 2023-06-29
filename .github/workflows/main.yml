@@ -1,0 +1,59 @@
+name: main
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/**'
+      - '.github/workflows/main.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      id: pnpm-install
+      with:
+        version: 8
+        run_install: false
+
+    - name: Get pnpm store directory
+      id: pnpm-cache
+      shell: bash
+      run: |
+        echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+    - uses: actions/cache@v3
+      name: Setup pnpm cache
+      with:
+        path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-store-
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Run npm build
+      run: pnpm run build
+
+    - uses:  'phips28/gh-action-bump-version@master'
+      name:  'Automated Version Bump'
+      id: version-bump
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        PACKAGEJSON_DIR:  'packages/analytica.click.gh-build'
+      with:
+        commit-message: 'CI: bumps version to {{version}} [skip ci]'

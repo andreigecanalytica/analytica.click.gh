@@ -1,0 +1,8 @@
+{
+  "labels": [
+    "analytica.click.gh"
+  ],
+  "extends": [
+    "github>andreigec/renovate"
+  ]
+}

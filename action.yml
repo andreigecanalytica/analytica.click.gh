@@ -1,0 +1,10 @@
+name: 'analytica.click.gh'
+description: 'analytica.click GH build step'
+author: 'analytica.click'
+inputs:
+  analyticaToken: # change this
+    required: true
+    description: 'your API token'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

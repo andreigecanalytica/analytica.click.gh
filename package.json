@@ -1,0 +1,47 @@
+{
+  "name": "analytica.click.gh-build",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "author": " <help@analytica.click> (analytica.click)",
+  "license": "ISC",
+  "private": false,
+  "scripts": {
+    "format": "eslint --ext .ts,.tsx ./src --fix",
+    "lint": "tsc && eslint --ext .ts,.tsx ./src",
+    "build-direct": "rimraf .build && rimraf dist && cross-env NODE_ENV=prod ts-node esbuild",
+    "build": "pnpm run lint && pnpm build-direct",
+    "start": "cross-env NODE_ENV=development nodemon -e ts,tsx -w ./src --exec 'ts-node esbuild'"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@emotion/react": ">=11",
+    "@emotion/styled": ">=11",
+    "@types/jsonwebtoken": "9.x",
+    "@types/react": "18.x",
+    "ag-common": "0.x",
+    "aws-sdk": "2.x",
+    "axios": "1.x",
+    "cross-env": "7.x",
+    "esbuild": "0.18.3",
+    "eslint-config-e7npm": "0.0.9",
+    "jsonwebtoken": "9.x",
+    "nodemon": "2.x",
+    "react": "18.x",
+    "react-dom": "18.x",
+    "rimraf": "5.x",
+    "ts-node": "10.x",
+    "typescript": "5.x"
+  },
+  "devDependencies": {
+    "esbuild-node-externals": "1.7.0",
+    "npm-dts": "1.3.12"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "yarn": "use pnpm",
+    "npm":"use pnpm",
+    "pnpm": ">=3"
+  }
+}
