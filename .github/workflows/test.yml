@@ -1,4 +1,14 @@
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
+    inputs:
+      analyticaToken:
+        description: 'api key'
+        required: true
+      eventName:
+        description: 'event name'
+        required: true
+        default: 'test event'
+
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: true
@@ -11,6 +21,6 @@ jobs:
     - name: test analytica trigger
       uses: andreigecanalytica/analytica.click.gh@1
       with:
-        analyticaToken: 111111111111
-        eventName: 'test event'
+        analyticaToken: '${{ github.event.inputs.analyticaToken }}'
+        eventName: '${{ github.event.inputs.eventName }}'
       
