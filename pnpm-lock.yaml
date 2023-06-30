@@ -17,6 +17,9 @@ dependencies:
   analytica.click:
     specifier: 0.0.338
     version: 0.0.338(@types/node@20.3.2)
+  axios:
+    specifier: ^1.4.0
+    version: 1.4.0
   cross-env:
     specifier: 7.0.3
     version: 7.0.3
