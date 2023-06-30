@@ -10,6 +10,7 @@ on:
       - 'action.yml'
       - '.github/workflows/main.yml'
       - 'esbuild.ts'
+      - 'package.json'
 
 jobs:
   build:
