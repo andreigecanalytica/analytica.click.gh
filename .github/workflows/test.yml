@@ -1,0 +1,14 @@
+on: [pull_request]
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  PR:
+    runs-on: ubuntu-latest
+    name: lint
+    steps:
+    - name: test analytica trigger
+      uses: andreigecanalytica/analytica.click.gh@1
+      with:
+        analyticaToken: 111111111111
