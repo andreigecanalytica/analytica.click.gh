@@ -56,5 +56,4 @@ jobs:
       run: >-
         gh release create 1
         --generate-notes
-        --clobber
         --title "Version ${{ github.ref_name }}"
