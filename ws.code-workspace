@@ -36,29 +36,12 @@
 		"version": "0.2.0",
 		"configurations": [
 			{
-				"name": "server",
 				"type": "node-terminal",
+				"name": "Debug Current Test File (npm run test)",
 				"request": "launch",
-				"command": "npm run start",
-				"cwd": "${workspaceFolder}/packages/ui",
-			},
-			{
-				"name": "client",
-				"type": "pwa-chrome",
-				"request": "launch",
-				"url": "http://localhost:3000",
-				"cwd": "${workspaceFolder}/packages/ui",
-				"webRoot": "${workspaceFolder}/packages/ui",
-			},
-			//   {
-			// 	"type": "chrome",
-			// 	"request": "attach",
-			// 	"name": "Attach to Chrome",
-			// 	"port": 9222,
-			// 	"urlFilter": "http://localhost:3000/*",
-			// 	"webRoot": "${workspaceFolder}",
-			// 	"cwd": "${workspaceFolder}/packages/ui",
-			//   },
+				"command": "npm run start -- src/direct.ts",
+				"cwd": "${fileDirname}"
+			  }
 		]
 	},"extensions": {
 		"recommendations": [

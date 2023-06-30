@@ -12,18 +12,19 @@
     "lint": "tsc && eslint --ext .ts,.tsx ./src",
     "build-direct": "rimraf .build && rimraf dist && cross-env NODE_ENV=prod ts-node esbuild",
     "build": "pnpm run lint && pnpm build-direct",
-    "start": "cross-env NODE_ENV=development nodemon -e ts,tsx -w ./src --exec 'ts-node esbuild'"
+    "start": "ts-node src/direct.ts"
   },
   "dependencies": {
-    "@actions/core": "^1.10.0",
-    "ag-common": "0.x",
-    "analytica.click": "^0.0.337",
-    "cross-env": "7.x",
-    "esbuild": "0.18.3",
+    "@actions/core": "1.10.0",
+    "@types/node": "^20.3.2",
+    "ag-common": "0.0.440",
+    "analytica.click": "0.0.338",
+    "cross-env": "7.0.3",
+    "esbuild": "0.18.10",
     "eslint-config-e7npm": "0.0.9",
-    "nodemon": "2.x",
-    "rimraf": "5.x",
-    "ts-node": "10.x",
+    "nodemon": "2.0.22",
+    "rimraf": "5.0.1",
+    "ts-node": "10.9.1",
     "typescript": "5.x"
   },
   "devDependencies": {
