@@ -1,3 +1,4 @@
+name: test flow
 on:
   workflow_dispatch:
     inputs:
