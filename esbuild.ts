@@ -1,5 +1,4 @@
 import { build } from 'esbuild';
-import { nodeExternalsPlugin } from 'esbuild-node-externals';
 import fs from 'fs';
 import { Generator } from 'npm-dts';
 

@@ -9,6 +9,7 @@ on:
       - 'src/**'
       - 'action.yml'
       - '.github/workflows/main.yml'
+      - 'esbuild.ts'
 
 jobs:
   build:
