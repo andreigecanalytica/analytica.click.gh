@@ -17,11 +17,6 @@ async function run() {
       platform: 'node',
       metafile: true,
       minify: process.env.NODE_ENV === 'development' ? false : true,
-      plugins: [
-        nodeExternalsPlugin({
-          allowList: ['common', 'common-api', 'common-ui'],
-        }),
-      ],
     }),
     new Generator({
       entry: 'types',
