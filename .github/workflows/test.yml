@@ -12,3 +12,5 @@ jobs:
       uses: andreigecanalytica/analytica.click.gh@1
       with:
         analyticaToken: 111111111111
+        eventName: 'test event'
+      

@@ -6,12 +6,13 @@
     "sourceMap": false,
     "allowJs": true,
     "isolatedModules": true,
-    "target": "ES6",
+    "target": "es6",
     "moduleResolution": "node",
     "skipLibCheck": true,
     "preserveConstEnums": true,
     "esModuleInterop": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "noEmit": true
   },
   "include": [
     "src/**/*.ts",

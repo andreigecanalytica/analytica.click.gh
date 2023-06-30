@@ -16,32 +16,23 @@
   },
   "dependencies": {
     "@actions/core": "^1.10.0",
-    "@emotion/react": ">=11",
-    "@emotion/styled": ">=11",
-    "@types/jsonwebtoken": "9.x",
-    "@types/react": "18.x",
     "ag-common": "0.x",
-    "aws-sdk": "2.x",
-    "axios": "1.x",
+    "analytica.click": "^0.0.336",
     "cross-env": "7.x",
     "esbuild": "0.18.3",
     "eslint-config-e7npm": "0.0.9",
-    "jsonwebtoken": "9.x",
     "nodemon": "2.x",
-    "react": "18.x",
-    "react-dom": "18.x",
     "rimraf": "5.x",
     "ts-node": "10.x",
     "typescript": "5.x"
   },
   "devDependencies": {
-    "esbuild-node-externals": "1.7.0",
     "npm-dts": "1.3.12"
   },
   "engines": {
     "node": ">=16.0.0",
     "yarn": "use pnpm",
-    "npm":"use pnpm",
+    "npm": "use pnpm",
     "pnpm": ">=3"
   }
 }

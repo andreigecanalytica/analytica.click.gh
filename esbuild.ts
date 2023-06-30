@@ -27,7 +27,7 @@ async function run() {
   ]);
 
   const { metafile } = r[0];
-  fs.writeFileSync('./dist/esbuild.json', JSON.stringify(metafile, null, 2));
+  //fs.writeFileSync('./dist/esbuild.json', JSON.stringify(metafile, null, 2));
 }
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
 run();

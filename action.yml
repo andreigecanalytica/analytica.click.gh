@@ -2,9 +2,12 @@ name: 'analytica.click.gh'
 description: 'analytica.click GH build step'
 author: 'analytica.click'
 inputs:
-  analyticaToken: # change this
+  analyticaToken:
     required: true
     description: 'your API token'
+  eventName:
+    required: true
+    description: 'the event name to track'
 runs:
   using: 'node16'
   main: 'dist/index.js'

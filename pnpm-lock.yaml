@@ -8,27 +8,12 @@ dependencies:
   '@actions/core':
     specifier: ^1.10.0
     version: 1.10.0
-  '@emotion/react':
-    specifier: '>=11'
-    version: 11.0.0(@babel/core@7.22.5)(@types/react@18.0.0)(react@18.0.0)
-  '@emotion/styled':
-    specifier: '>=11'
-    version: 11.0.0(@babel/core@7.22.5)(@emotion/react@11.0.0)(@types/react@18.0.0)(react@18.0.0)
-  '@types/jsonwebtoken':
-    specifier: 9.x
-    version: 9.0.0
-  '@types/react':
-    specifier: 18.x
-    version: 18.0.0
   ag-common:
     specifier: 0.x
     version: 0.0.3(aws-lambda@1.0.7)(styled-components@6.0.1)
-  aws-sdk:
-    specifier: 2.x
-    version: 2.0.1
-  axios:
-    specifier: 1.x
-    version: 1.0.0
+  analytica.click:
+    specifier: ^0.0.336
+    version: 0.0.336(@types/node@20.3.2)(aws-lambda@1.0.7)(styled-components@6.0.1)
   cross-env:
     specifier: 7.x
     version: 7.0.0
@@ -38,18 +23,9 @@ dependencies:
   eslint-config-e7npm:
     specifier: 0.0.9
     version: 0.0.9
-  jsonwebtoken:
-    specifier: 9.x
-    version: 9.0.0
   nodemon:
     specifier: 2.x
     version: 2.0.0
-  react:
-    specifier: 18.x
-    version: 18.0.0
-  react-dom:
-    specifier: 18.x
-    version: 18.0.0(react@18.0.0)
   rimraf:
     specifier: 5.x
     version: 5.0.0
@@ -61,9 +37,6 @@ dependencies:
     version: 5.0.2
 
 devDependencies:
-  esbuild-node-externals:
-    specifier: 1.7.0
-    version: 1.7.0(esbuild@0.18.3)
   npm-dts:
     specifier: 1.3.12
     version: 1.3.12
@@ -1523,26 +1496,23 @@ packages:
     resolution: {integrity: sha512-W2P2c/VRW1/1tLox0mVUalvnWXxavmv/Oum2aPsRcoDJuob75FC3Y8FbpfLwUegRcxINtGUMPq0tFCvYNTBXNA==}
     dev: false
 
-  /@emotion/react@11.0.0(@babel/core@7.22.5)(@types/react@18.0.0)(react@18.0.0):
-    resolution: {integrity: sha512-mMQOuJcCVHUHUKZMamCbNnuUEgEff1W1JL3/1jGXFN52Ik5R/2ccVb3FherYFkSJkkjkPC3dUfFSeisXVh9Spg==}
+  /@emotion/react@11.11.1(@types/react@18.2.14)(react@18.0.0):
+    resolution: {integrity: sha512-5mlW1DquU5HaxjLkfkGN1GA/fvVGdyHURRiX/0FHl2cfIfRxSOfmxEH5YS43edp0OldZrZ+dkBKbngxcNCdZvA==}
     peerDependencies:
-      '@babel/core': ^7.0.0
       '@types/react': '*'
       react: '>=16.8.0'
     peerDependenciesMeta:
-      '@babel/core':
-        optional: true
       '@types/react':
         optional: true
     dependencies:
-      '@babel/core': 7.22.5
       '@babel/runtime': 7.22.5
+      '@emotion/babel-plugin': 11.11.0
       '@emotion/cache': 11.11.0
       '@emotion/serialize': 1.1.2
-      '@emotion/sheet': 1.2.2
+      '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@18.0.0)
       '@emotion/utils': 1.2.1
-      '@emotion/weak-memoize': 0.2.5
-      '@types/react': 18.0.0
+      '@emotion/weak-memoize': 0.3.1
+      '@types/react': 18.2.14
       hoist-non-react-statics: 3.3.2
       react: 18.0.0
     dev: false
@@ -1561,27 +1531,24 @@ packages:
     resolution: {integrity: sha512-0QBtGvaqtWi+nx6doRwDdBIzhNdZrXUppvTM4dtZZWEGTXL/XE/yJxLMGlDT1Gt+UHH5IX1n+jkXyytE/av7OA==}
     dev: false
 
-  /@emotion/styled@11.0.0(@babel/core@7.22.5)(@emotion/react@11.0.0)(@types/react@18.0.0)(react@18.0.0):
-    resolution: {integrity: sha512-498laccxJlBiJqrr2r/fx9q+Pr55D0URP2UyOkoSGLjevb8LLAFWueqthsQ5XijE66iGo7y3rzzEYdA7CHmZEQ==}
+  /@emotion/styled@11.11.0(@emotion/react@11.11.1)(@types/react@18.2.14)(react@18.0.0):
+    resolution: {integrity: sha512-hM5Nnvu9P3midq5aaXj4I+lnSfNi7Pmd4EWk1fOZ3pxookaQTNew6bp4JaCBYM4HVFZF9g7UjJmsUmC2JlxOng==}
     peerDependencies:
-      '@babel/core': ^7.0.0
       '@emotion/react': ^11.0.0-rc.0
       '@types/react': '*'
       react: '>=16.8.0'
     peerDependenciesMeta:
-      '@babel/core':
-        optional: true
       '@types/react':
         optional: true
     dependencies:
-      '@babel/core': 7.22.5
       '@babel/runtime': 7.22.5
       '@emotion/babel-plugin': 11.11.0
       '@emotion/is-prop-valid': 1.2.1
-      '@emotion/react': 11.0.0(@babel/core@7.22.5)(@types/react@18.0.0)(react@18.0.0)
+      '@emotion/react': 11.11.1(@types/react@18.2.14)(react@18.0.0)
       '@emotion/serialize': 1.1.2
+      '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@18.0.0)
       '@emotion/utils': 1.2.1
-      '@types/react': 18.0.0
+      '@types/react': 18.2.14
       react: 18.0.0
     dev: false
 
@@ -1589,12 +1556,16 @@ packages:
     resolution: {integrity: sha512-KOEGMu6dmJZtpadb476IsZBclKvILjopjUii3V+7MnXIQCYh8W3NgNcgwo21n9LXZX6EDIKvqfjYxXebDwxKmQ==}
     dev: false
 
-  /@emotion/utils@1.2.1:
-    resolution: {integrity: sha512-Y2tGf3I+XVnajdItskUCn6LX+VUDmP6lTL4fcqsXAv43dnlbZiuW4MWQW38rW/BVWSE7Q/7+XQocmpnRYILUmg==}
+  /@emotion/use-insertion-effect-with-fallbacks@1.0.1(react@18.0.0):
+    resolution: {integrity: sha512-jT/qyKZ9rzLErtrjGgdkMBn2OP8wl0G3sQlBb3YPryvKHsjvINUhVaPFfP+fpBcOkmrVOVEEHQFJ7nbj2TH2gw==}
+    peerDependencies:
+      react: '>=16.8.0'
+    dependencies:
+      react: 18.0.0
     dev: false
 
-  /@emotion/weak-memoize@0.2.5:
-    resolution: {integrity: sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==}
+  /@emotion/utils@1.2.1:
+    resolution: {integrity: sha512-Y2tGf3I+XVnajdItskUCn6LX+VUDmP6lTL4fcqsXAv43dnlbZiuW4MWQW38rW/BVWSE7Q/7+XQocmpnRYILUmg==}
     dev: false
 
   /@emotion/weak-memoize@0.3.1:
@@ -1607,6 +1578,7 @@ packages:
     cpu: [arm64]
     os: [android]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/android-arm@0.18.3:
@@ -1615,6 +1587,7 @@ packages:
     cpu: [arm]
     os: [android]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/android-x64@0.18.3:
@@ -1623,6 +1596,7 @@ packages:
     cpu: [x64]
     os: [android]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/darwin-arm64@0.18.3:
@@ -1631,6 +1605,7 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/darwin-x64@0.18.3:
@@ -1639,6 +1614,7 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/freebsd-arm64@0.18.3:
@@ -1647,6 +1623,7 @@ packages:
     cpu: [arm64]
     os: [freebsd]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/freebsd-x64@0.18.3:
@@ -1655,6 +1632,7 @@ packages:
     cpu: [x64]
     os: [freebsd]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/linux-arm64@0.18.3:
@@ -1663,6 +1641,7 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/linux-arm@0.18.3:
@@ -1671,6 +1650,7 @@ packages:
     cpu: [arm]
     os: [linux]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/linux-ia32@0.18.3:
@@ -1679,6 +1659,7 @@ packages:
     cpu: [ia32]
     os: [linux]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/linux-loong64@0.18.3:
@@ -1687,6 +1668,7 @@ packages:
     cpu: [loong64]
     os: [linux]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/linux-mips64el@0.18.3:
@@ -1695,6 +1677,7 @@ packages:
     cpu: [mips64el]
     os: [linux]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/linux-ppc64@0.18.3:
@@ -1703,6 +1686,7 @@ packages:
     cpu: [ppc64]
     os: [linux]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/linux-riscv64@0.18.3:
@@ -1711,6 +1695,7 @@ packages:
     cpu: [riscv64]
     os: [linux]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/linux-s390x@0.18.3:
@@ -1719,6 +1704,7 @@ packages:
     cpu: [s390x]
     os: [linux]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/linux-x64@0.18.3:
@@ -1727,6 +1713,7 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/netbsd-x64@0.18.3:
@@ -1735,6 +1722,7 @@ packages:
     cpu: [x64]
     os: [netbsd]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/openbsd-x64@0.18.3:
@@ -1743,6 +1731,7 @@ packages:
     cpu: [x64]
     os: [openbsd]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/sunos-x64@0.18.3:
@@ -1751,6 +1740,7 @@ packages:
     cpu: [x64]
     os: [sunos]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/win32-arm64@0.18.3:
@@ -1759,6 +1749,7 @@ packages:
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/win32-ia32@0.18.3:
@@ -1767,6 +1758,7 @@ packages:
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@esbuild/win32-x64@0.18.3:
@@ -1775,6 +1767,7 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
+    dev: false
     optional: true
 
   /@eslint-community/eslint-utils@4.4.0(eslint@8.43.0):
@@ -1950,8 +1943,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: false
 
-  /@types/jsonwebtoken@9.0.0:
-    resolution: {integrity: sha512-mM4TkDpA9oixqg1Fv2vVpOFyIVLJjm5x4k0V+K/rEsizfjD7Tk7LKk3GTtbB7KCfP0FEHQtsZqFxYA0+sijNVg==}
+  /@types/jsonwebtoken@9.0.2:
+    resolution: {integrity: sha512-drE6uz7QBKq1fYqqoFKTDRdFCPHd5TCub75BM+D+cMx7NU9hUz7SESLfC2fSCXVFMO5Yj8sOWHuGqPgjc+fz0Q==}
     dependencies:
       '@types/node': 20.3.2
     dev: false
@@ -1974,8 +1967,8 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: false
 
-  /@types/react@18.0.0:
-    resolution: {integrity: sha512-7+K7zEQYu7NzOwQGLR91KwWXXDzmTFODRVizJyIALf6RfLv2GDpqpknX64pvRVILXCpXi7O/pua8NGk44dLvJw==}
+  /@types/react@18.2.14:
+    resolution: {integrity: sha512-A0zjq+QN/O0Kpe30hA1GidzyFjatVvrpIvWLxD+xv67Vt91TWWgco9IvrJBkeyHm1trGaFS/FSGqPlhyeZRm0g==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
@@ -2166,11 +2159,6 @@ packages:
       - debug
     dev: false
 
-  /agentkeepalive@0.2.2:
-    resolution: {integrity: sha512-uJME0a1lriSJFTz4Q1cDQKIc69oHfjF5LOKGESHgW4BbTOuSFlEUtaVzkUhkMf8vO9hYJKGQtjpfYlVKNwwfqQ==}
-    engines: {node: '>= 0.8.0'}
-    dev: false
-
   /ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
     dependencies:
@@ -2178,6 +2166,34 @@ packages:
       fast-json-stable-stringify: 2.1.0
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
+    dev: false
+
+  /analytica.click@0.0.336(@types/node@20.3.2)(aws-lambda@1.0.7)(styled-components@6.0.1):
+    resolution: {integrity: sha512-g6z1vNW8PBbjTn9oaggqY9DvT1WzTc6Qz8IO4V54OgUC/Y33g+jruLfKT+gOWJtIsi2j5tjus/GkCNOCN5QORg==}
+    dependencies:
+      '@emotion/react': 11.11.1(@types/react@18.2.14)(react@18.0.0)
+      '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.14)(react@18.0.0)
+      '@types/jsonwebtoken': 9.0.2
+      '@types/react': 18.2.14
+      ag-common: 0.0.3(aws-lambda@1.0.7)(styled-components@6.0.1)
+      aws-sdk: 2.1407.0
+      axios: 1.4.0
+      cross-env: 7.0.0
+      esbuild: 0.18.3
+      jsonwebtoken: 9.0.0
+      nodemon: 2.0.0
+      react: 18.0.0
+      react-dom: 18.0.0(react@18.0.0)
+      rimraf: 5.0.0
+      ts-node: 10.0.0(@types/node@20.3.2)(typescript@5.0.2)
+      typescript: 5.0.2
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - aws-lambda
+      - debug
+      - styled-components
     dev: false
 
   /ansi-align@2.0.0:
@@ -2337,20 +2353,6 @@ packages:
       watchpack: 2.4.0
     dev: false
 
-  /aws-sdk-apis@3.1.10:
-    resolution: {integrity: sha512-YfXgzjJA5AaONqS6+eSRg0CaBQKpSYTAB4mAxp7pApu49VwOWcpvTyt9uck7oCHOQcvZw/tdw3fJCS+qjZivtw==}
-    dev: false
-
-  /aws-sdk@2.0.1:
-    resolution: {integrity: sha512-BI5ohD3lHEm2Es3jIpYAFHnzohdVvYeGpDJd0S+HE0GcH6Y9q1QziRQGmAiQWvX1lred5We7bhnVGGdz8Sb/0g==}
-    engines: {node: '>= 0.6.0'}
-    dependencies:
-      agentkeepalive: 0.2.2
-      aws-sdk-apis: 3.1.10
-      xml2js: 0.2.6
-      xmlbuilder: 0.4.2
-    dev: false
-
   /aws-sdk@2.1407.0:
     resolution: {integrity: sha512-J02Cjciw+5p9zR7923rfH+UGDEmbg72YRAZISEahzuWPf/DwMAyIrC5B1cMMq3KrV+KVsRtEY5LujVCFKwB8Yw==}
     engines: {node: '>= 10.0.0'}
@@ -2380,8 +2382,8 @@ packages:
       - debug
     dev: false
 
-  /axios@1.0.0:
-    resolution: {integrity: sha512-SsHsGFN1qNPFT5QhSoSD37SHDfGyLSW5AESmyLk2JeCMHv5g0I9g0Hz/zQHx2KNe0jGXh2q2hAm7OdkXm360CA==}
+  /axios@1.4.0:
+    resolution: {integrity: sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==}
     dependencies:
       follow-redirects: 1.15.2
       form-data: 4.0.0
@@ -2982,17 +2984,6 @@ packages:
       is-symbol: 1.0.4
     dev: false
 
-  /esbuild-node-externals@1.7.0(esbuild@0.18.3):
-    resolution: {integrity: sha512-nfY3hxtO2anCTZ87LgfzCTfBuyG6de+NyiCNMF1mgrBufS0NgoYlBwF77HHuOInsJLxsAJf0BfLeV6ekZ3hRuA==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      esbuild: 0.12 - 0.17
-    dependencies:
-      esbuild: 0.18.3
-      find-up: 5.0.0
-      tslib: 2.6.0
-    dev: true
-
   /esbuild@0.18.3:
     resolution: {integrity: sha512-eadWJC4CRpj93+miO5ZBlvCv+m2x6pzyNBznTvUeLFObMmxs1IMd8cCf6qiDVEZuDL6W8W7u+ZNW3GKEfOdDsA==}
     engines: {node: '>=12'}
@@ -3021,6 +3012,7 @@ packages:
       '@esbuild/win32-arm64': 0.18.3
       '@esbuild/win32-ia32': 0.18.3
       '@esbuild/win32-x64': 0.18.3
+    dev: false
 
   /escalade@3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
@@ -3483,6 +3475,7 @@ packages:
     dependencies:
       locate-path: 6.0.0
       path-exists: 4.0.0
+    dev: false
 
   /findup-sync@4.0.0:
     resolution: {integrity: sha512-6jvvn/12IC4quLBL1KNokxC7wWTvYncaVUYSoxWw7YykPLuRrnv4qdHcSOywOI5RpkOVGeQRtWM8/q+G6W6qfQ==}
@@ -4276,6 +4269,7 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       p-locate: 5.0.0
+    dev: false
 
   /lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
@@ -4662,12 +4656,14 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yocto-queue: 0.1.0
+    dev: false
 
   /p-locate@5.0.0:
     resolution: {integrity: sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==}
     engines: {node: '>=10'}
     dependencies:
       p-limit: 3.1.0
+    dev: false
 
   /package-json@4.0.1:
     resolution: {integrity: sha512-q/R5GrMek0vzgoomq6rm9OX+3PQve8sLwTirmK30YB3Cu0Bbt9OX9M/SIUnroN5BGJkzwGsFwDaRGD9EwBOlCA==}
@@ -4704,6 +4700,7 @@ packages:
   /path-exists@4.0.0:
     resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
     engines: {node: '>=8'}
+    dev: false
 
   /path-is-absolute@1.0.1:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
@@ -5034,10 +5031,6 @@ packages:
     resolution: {integrity: sha512-e2bDA2WJT0wxseVd4lsDP4+3ONX6HpMXQa1ZhFQ7SU+GjvORCmShbCMltrtIDfkYhVHrOcPtj+KhmDBdPdZD1g==}
     engines: {node: '>=10'}
     dev: true
-
-  /sax@0.4.2:
-    resolution: {integrity: sha512-6Zsl4gnHjiTQfrOzsWdc0bHJepF5KJAVuM5fcyEJrqGyszkx2c55IclWP4D692rJrl1w0tExhbvYKjKNZl5wHg==}
-    dev: false
 
   /sax@1.2.1:
     resolution: {integrity: sha512-8I2a3LovHTOpm7NV5yOyO8IHqgVsfK4+UuySrXU8YXkSRX7k6hCV9b3HrkKCr3nMpgj+0bmocaJJWpvp1oc7ZA==}
@@ -5470,6 +5463,7 @@ packages:
 
   /tslib@2.6.0:
     resolution: {integrity: sha512-7At1WUettjcSRHXCyYtTselblcHl9PJFFVKiCAy/bY97+BPZXSQ2wbq0P9s8tK2G7dFQfNnlJnPAiArVBVBsfA==}
+    dev: false
 
   /tsutils@3.21.0(typescript@5.0.2):
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
@@ -5752,23 +5746,12 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
-  /xml2js@0.2.6:
-    resolution: {integrity: sha512-h+Nzgo0eLwideldZGqSquNtrsuX5zcDREImBa1GSNw9QljlXiFcM3E1kWjLprRjJe2jRuvnVk0j3WgQo9Deoog==}
-    dependencies:
-      sax: 0.4.2
-    dev: false
-
   /xml2js@0.5.0:
     resolution: {integrity: sha512-drPFnkQJik/O+uPKpqSgr22mpuFHqKdbS835iAQrUC73L2F5WkboIRd63ai/2Yg6I1jzifPFKH2NTK+cfglkIA==}
     engines: {node: '>=4.0.0'}
     dependencies:
       sax: 1.2.1
       xmlbuilder: 11.0.1
-    dev: false
-
-  /xmlbuilder@0.4.2:
-    resolution: {integrity: sha512-h/+ncQQSU/iYycmI2wTN25t7RYN7O2oq9uvI+2+UObi4KcmQh/jUS4N31g5vJttQt7MODsnmBtbcll3YbNyvfw==}
-    engines: {node: '>=0.2.0'}
     dev: false
 
   /xmlbuilder@11.0.1:
@@ -5801,3 +5784,4 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: false
