@@ -12,8 +12,8 @@ dependencies:
     specifier: 0.x
     version: 0.0.3(aws-lambda@1.0.7)(styled-components@6.0.1)
   analytica.click:
-    specifier: ^0.0.336
-    version: 0.0.336(@types/node@20.3.2)(aws-lambda@1.0.7)(styled-components@6.0.1)
+    specifier: ^0.0.337
+    version: 0.0.337(@types/node@20.3.2)(aws-lambda@1.0.7)(styled-components@6.0.1)
   cross-env:
     specifier: 7.x
     version: 7.0.0
@@ -2168,8 +2168,8 @@ packages:
       uri-js: 4.4.1
     dev: false
 
-  /analytica.click@0.0.336(@types/node@20.3.2)(aws-lambda@1.0.7)(styled-components@6.0.1):
-    resolution: {integrity: sha512-g6z1vNW8PBbjTn9oaggqY9DvT1WzTc6Qz8IO4V54OgUC/Y33g+jruLfKT+gOWJtIsi2j5tjus/GkCNOCN5QORg==}
+  /analytica.click@0.0.337(@types/node@20.3.2)(aws-lambda@1.0.7)(styled-components@6.0.1):
+    resolution: {integrity: sha512-t+K/wKdpwLq9Inh9S5v7RPWMP+nB6Y09DfAsCfLHv8SKNgOgYOvGxMs5FvYqPTKImTauDs9BHd7Ig4aR0ktaiA==}
     dependencies:
       '@emotion/react': 11.11.1(@types/react@18.2.14)(react@18.0.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.14)(react@18.0.0)

@@ -17,7 +17,7 @@
   "dependencies": {
     "@actions/core": "^1.10.0",
     "ag-common": "0.x",
-    "analytica.click": "^0.0.336",
+    "analytica.click": "^0.0.337",
     "cross-env": "7.x",
     "esbuild": "0.18.3",
     "eslint-config-e7npm": "0.0.9",
