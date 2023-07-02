@@ -66,4 +66,4 @@ jobs:
       uses: andreigecanalytica/analytica.click.gh@1
       with:
         analyticaToken: '${{ secrets.ANALYTICATOKEN }}'
-        eventName: '${{ github.repository }}-${{ github.job }}-${{ github.event_name }}'
+        eventName: '${{ github.repository }}/GH/${{ github.job }}/${{ github.event_name }}'
