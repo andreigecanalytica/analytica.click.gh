@@ -1,3 +1,5 @@
+import 'cross-fetch/polyfill';
+
 import * as core from '@actions/core';
 
 import { runParams } from './main';
