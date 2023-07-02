@@ -12,11 +12,11 @@ dependencies:
     specifier: ^20.3.2
     version: 20.3.2
   ag-common:
-    specifier: 0.0.440
-    version: 0.0.440
+    specifier: 0.0.441
+    version: 0.0.441
   analytica.click:
-    specifier: 0.0.338
-    version: 0.0.338(@types/node@20.3.2)
+    specifier: 0.0.339
+    version: 0.0.339(@types/node@20.3.2)
   axios:
     specifier: ^1.4.0
     version: 1.4.0
@@ -875,8 +875,8 @@ packages:
     hasBin: true
     dev: false
 
-  /ag-common@0.0.440:
-    resolution: {integrity: sha512-iz38TlAPo7vTRmA6jJ6eBtxp3RRWX1OiLzMq9G2u/YMXYOF1ZgU8kRQx/7LyRl9i7ZhBPDvswFUF6uU1YY1qgg==}
+  /ag-common@0.0.441:
+    resolution: {integrity: sha512-fBRZX4jDQsGoNlcjalHWEFubGgYx42gfGwSayqwiMGvWUkk3MhQEWy6uMYNwCkfdDASm9SDw12f4xLAlpkFxdw==}
     requiresBuild: true
     dependencies:
       aws-cdk-lib: 2.85.0(constructs@10.2.63)
@@ -924,14 +924,14 @@ packages:
       uri-js: 4.4.1
     dev: false
 
-  /analytica.click@0.0.338(@types/node@20.3.2):
-    resolution: {integrity: sha512-o7xaqfe7LHcrKYAkihwE6f0UIXby0OPh6Vofvgjn+cxyWFwyUmzD/o8O8jRjzD1Pdx3Rd//zCqkkNS2Uj5/lpg==}
+  /analytica.click@0.0.339(@types/node@20.3.2):
+    resolution: {integrity: sha512-uC361v9jC9CPIoB16dxUMJuvqZwQUJpSJHZ+ru1lnhztoHD/mP2a+Gq1ff0tSmcUKW3YA6Kfg0I2wWmKiTj7+A==}
     dependencies:
       '@emotion/react': 11.11.1(@types/react@18.2.14)(react@18.0.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.14)(react@18.0.0)
       '@types/jsonwebtoken': 9.0.2
       '@types/react': 18.2.14
-      ag-common: 0.0.440
+      ag-common: 0.0.441
       aws-sdk: 2.1407.0
       axios: 1.4.0
       cross-env: 7.0.3
