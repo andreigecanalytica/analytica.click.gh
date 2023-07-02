@@ -61,3 +61,9 @@ jobs:
         gh release create 1
         --generate-notes
         --title "Version ${{ github.ref_name }}"
+
+    - name: notify analytica of build
+      uses: andreigecanalytica/analytica.click.gh@1
+      with:
+        analyticaToken: '${{ secrets.ANALYTICATOKEN }}'
+        eventName: '${{ github.repository }}-${{ github.job }}-${{ github.event_name }}'

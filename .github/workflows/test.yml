@@ -5,17 +5,13 @@ on:
       analyticaToken:
         description: 'api key'
         required: true
-      eventName:
-        description: 'event name'
-        required: true
-        default: 'test event'
 
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: true
 
 jobs:
-  PR:
+  test:
     runs-on: ubuntu-latest
     name: test
     steps:
@@ -23,5 +19,5 @@ jobs:
       uses: andreigecanalytica/analytica.click.gh@1
       with:
         analyticaToken: '${{ github.event.inputs.analyticaToken }}'
-        eventName: '${{ github.event.inputs.eventName }}'
+        eventName: '${{ github.repository }}-${{ github.job }}-${{ github.event_name }}'
       
