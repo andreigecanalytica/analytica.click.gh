@@ -47,23 +47,11 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pnpm-store-
 
-    # - name: Install dependencies
-    #   run: pnpm install
-
-    # - name: Run npm build
-    #   run: pnpm run build
-
     - name: Release
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: >-
-        gh release delete 1 --cleanup-tag -y;
-        gh release create 1
+        gh release delete 2 --cleanup-tag -y;
+        gh release create 2
         --generate-notes
         --title "Version ${{ github.ref_name }}"
-
-    - name: notify analytica of build
-      uses: andreigecanalytica/analytica.click.gh@1
-      with:
-        analyticaToken: '${{ secrets.ANALYTICATOKEN }}'
-        eventName: '${{ github.repository }}/GH/${{ github.job }}/${{ github.event_name }}'

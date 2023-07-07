@@ -6,12 +6,13 @@ import * as core from '@actions/core';
 import { runParams } from './main';
 
 async function run(): Promise<void> {
-  const analyticaToken: string = core.getInput('analyticaToken');
-  const eventName: string = core.getInput('eventName');
-  if (!analyticaToken || !eventName) {
+  const ANALYTICA_TOKEN: string = core.getInput('ANALYTICA_TOKEN');
+  const GITHUB_CONTEXT: string = core.getInput('GITHUB_CONTEXT');
+  if (!ANALYTICA_TOKEN || !GITHUB_CONTEXT) {
     throw new Error('missing values');
   }
-  return runParams({ analyticaToken, eventName });
+  // return runParams({ ANALYTICA_TOKEN, GITHUB_CONTEXT });
+  console.log('gc=', GITHUB_CONTEXT);
 }
 
 void run();

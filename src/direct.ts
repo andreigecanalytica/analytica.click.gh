@@ -1,3 +1,3 @@
 import { runParams } from './main';
 
-void runParams({ analyticaToken: 'xxx', eventName: 'aaa' });
+void runParams({ ANALYTICA_TOKEN: 'xxx', GITHUB_CONTEXT: 'aaa' });

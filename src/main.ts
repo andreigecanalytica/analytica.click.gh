@@ -2,18 +2,18 @@ import * as core from '@actions/core';
 import { track } from 'analytica.click';
 
 export const runParams = async ({
-  analyticaToken,
-  eventName,
+  ANALYTICA_TOKEN,
+  GITHUB_CONTEXT,
 }: {
-  analyticaToken: string;
-  eventName: string;
+  ANALYTICA_TOKEN: string;
+  GITHUB_CONTEXT: string;
 }) => {
   try {
-    const e = await track({ analyticaToken, eventName });
+    const e = await track({ analyticaToken: ANALYTICA_TOKEN, eventName: '' });
     if (e.error) {
       core.error('Unexpected tracking error:' + e.error);
     } else {
-      core.info('Tracked event to analytica.click successfully:' + eventName);
+      core.info('Tracked event to analytica.click successfully:' + '');
     }
   } catch (error) {
     //never fail
