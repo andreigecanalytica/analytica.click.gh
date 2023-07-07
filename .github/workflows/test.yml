@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     name: test
     steps:
-    - name: test analytica trigger
-      uses: andreigecanalytica/analytica.click.gh@1
+    - name: notify analytica of build
+      uses: andreigecanalytica/analytica.click.gh@2
       with:
-        analyticaToken: '${{ github.event.inputs.analyticaToken }}'
-        eventName: '${{ github.repository }}/GH/${{ github.job }}/${{ github.event_name }}'
+        ANALYTICA_TOKEN: '${{ secrets.ANALYTICATOKEN }}'
+        GITHUB_CONTEXT: ${{ toJson(github) }}

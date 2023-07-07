@@ -54,4 +54,10 @@ jobs:
         gh release delete 2 --cleanup-tag -y || true;
         gh release create 2
         --generate-notes
-        --title "Version ${{ github.ref_name }}";
+        --title "Version ${{ github.ref_name }}"
+
+    - name: notify analytica of build
+      uses: andreigecanalytica/analytica.click.gh@2
+      with:
+        ANALYTICA_TOKEN: '${{ secrets.ANALYTICATOKEN }}'
+        GITHUB_CONTEXT: ${{ toJson(github) }}
