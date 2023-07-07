@@ -4,17 +4,18 @@ import 'cross-fetch/polyfill';
 import * as core from '@actions/core';
 
 import { runParams } from './main';
+import { IGithubContext } from './types';
 
 async function run(): Promise<void> {
   const ANALYTICA_TOKEN: string = core.getInput('ANALYTICA_TOKEN');
-  const GITHUB_CONTEXT: string = core.getInput('GITHUB_CONTEXT');
-  if (!ANALYTICA_TOKEN || !GITHUB_CONTEXT) {
-    core.warning('missing values1');
+  const gcString: string = core.getInput('GITHUB_CONTEXT');
+  const github = JSON.parse(gcString) as IGithubContext;
+  if (!ANALYTICA_TOKEN || !github?.repository) {
+    core.warning('missing values');
     return;
   }
-  // return runParams({ ANALYTICA_TOKEN, GITHUB_CONTEXT });
-  console.log('gc1=', GITHUB_CONTEXT);
-  console.log('gc=', (GITHUB_CONTEXT as any).token);
+
+  return runParams({ ANALYTICA_TOKEN, github });
 }
 
 void run();
