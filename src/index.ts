@@ -10,7 +10,7 @@ async function run(): Promise<void> {
   const GITHUB_CONTEXT: string = core.getInput('GITHUB_CONTEXT');
   if (!ANALYTICA_TOKEN || !GITHUB_CONTEXT) {
     console.log('z=', ANALYTICA_TOKEN, GITHUB_CONTEXT);
-    core.warning('missing values');
+    core.warning('missing values1');
     return;
   }
   // return runParams({ ANALYTICA_TOKEN, GITHUB_CONTEXT });
