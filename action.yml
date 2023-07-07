@@ -6,7 +6,7 @@ inputs:
     required: true
     description: 'your API token'
   GITHUB_CONTEXT:
-    required: true
+    required: false
     description: 'the github context'
     default: '${{ toJson(github) }}'
 runs:
