@@ -4,18 +4,32 @@ import 'cross-fetch/polyfill';
 import * as core from '@actions/core';
 
 import { runParams } from './main';
-import { IGithubContext } from './types';
+import { IGithubContext, IJobContext } from './types';
 
 async function run(): Promise<void> {
   const ANALYTICA_TOKEN: string = core.getInput('ANALYTICA_TOKEN');
   const gcString: string = core.getInput('GITHUB_CONTEXT');
   const github = JSON.parse(gcString) as IGithubContext;
-  if (!ANALYTICA_TOKEN || !github?.repository) {
-    core.warning('missing values');
+
+  const jString: string = core.getInput('JOB_CONTEXT');
+  const job = JSON.parse(jString) as IJobContext;
+
+  if (!ANALYTICA_TOKEN) {
+    core.warning('missing ANALYTICA_TOKEN');
     return;
   }
 
-  return runParams({ ANALYTICA_TOKEN, github });
+  if (!github?.repository) {
+    core.warning('missing github context');
+    return;
+  }
+
+  if (!job.status) {
+    core.warning('missing job context');
+    return;
+  }
+
+  return runParams({ ANALYTICA_TOKEN, github, job });
 }
 
 void run();

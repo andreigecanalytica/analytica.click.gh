@@ -1,3 +1,6 @@
+export interface IJobContext {
+  status: 'failure' | 'success';
+}
 export interface IGithubContext {
   token: string;
   job: string;

@@ -9,6 +9,10 @@ inputs:
     required: false
     description: 'the github context'
     default: '${{ toJson(github) }}'
+  JOB_CONTEXT:
+    required: false
+    description: 'the job context'
+    default: '${{ toJson(job) }}'
 runs:
   using: 'node16'
   main: 'dist/index.js'
