@@ -68,12 +68,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: >-
-        gh release delete 2 --cleanup-tag -y || true;
-        gh release create 2
+        gh release delete v2 --cleanup-tag -y || true;
+        gh release create v2
         --generate-notes
         --title "Version ${{ github.ref_name }}"
-
-    - name: notify analytica of build
-      uses: andreigecanalytica/analytica.click.gh@2
-      with:
-        ANALYTICA_TOKEN: '${{ secrets.ANALYTICATOKEN }}'
