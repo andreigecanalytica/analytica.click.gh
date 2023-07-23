@@ -52,6 +52,12 @@ jobs:
 
     - name: Run npm build
       run: pnpm run build
+    
+    - name: Update git
+      run: |
+        git add --force dist
+        git commit -m "updated dist (CI)"
+        git push
 
     - name: Release
       env:
