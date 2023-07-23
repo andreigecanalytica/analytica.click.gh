@@ -28,6 +28,15 @@ jobs:
       id: failure
       run: exit 1
 
+    - name: Dump GitHub context
+      if: always()
+      env:
+        JOB_CONTEXT: ${{ toJson(job) }}
+        STEPS_CONTEXT: ${{ toJson(steps) }}
+      run: |
+        echo "$JOB_CONTEXT";
+        echo "$STEPS_CONTEXT"
+
     - name: notify analytica of build
       if: always()
       uses: andreigecanalytica/analytica.click.gh@2
