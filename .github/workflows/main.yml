@@ -53,16 +53,13 @@ jobs:
     - name: Run npm build
       run: pnpm run build
 
-    - name: setup git config
+    - name: Update git
       run: |
         git config user.name "GitHub Actions Bot"
         git config user.email "<>"
-    
-    - name: Update git
-      run: |
-        git add --force dist
-        git commit -m "updated dist (CI)"
-        git push
+        git add --force dist || true;
+        git commit -m "updated dist (CI)" || true;
+        git push || true;
 
     - name: Release
       env:
