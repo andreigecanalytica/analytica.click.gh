@@ -30,6 +30,6 @@ jobs:
 
     - name: notify analytica of build
       if: always()
-      uses: andreigecanalytica/analytica.click.gh@2
+      uses: andreigecanalytica/analytica.click.gh@v2
       with:
         ANALYTICA_TOKEN: '${{ secrets.ANALYTICATOKEN }}'
