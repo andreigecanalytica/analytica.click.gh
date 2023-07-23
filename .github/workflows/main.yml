@@ -52,6 +52,11 @@ jobs:
 
     - name: Run npm build
       run: pnpm run build
+
+    - name: setup git config
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "<>"
     
     - name: Update git
       run: |
