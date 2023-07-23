@@ -19,10 +19,13 @@ jobs:
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
         JOB_CONTEXT: ${{ toJson(job) }}
-      run: 
+        STEPS_CONTEXT: ${{ toJson(steps) }}
+      run: |
         echo "$GITHUB_CONTEXT";
-        echo "$JOB_CONTEXT"
+        echo "$JOB_CONTEXT";
+        echo "$STEPS_CONTEXT"
     - name: Try to fail
+      id: failure
       run: exit 1
 
     - name: notify analytica of build
