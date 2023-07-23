@@ -1,4 +1,4 @@
-name: test flow
+name: test fail
 on:
   workflow_dispatch:
     inputs:
@@ -11,11 +11,22 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  testFail:
     runs-on: ubuntu-latest
-    name: test
+    name: testFail
     steps:
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+        JOB_CONTEXT: ${{ toJson(job) }}
+      run: 
+        echo "$GITHUB_CONTEXT";
+        echo "$JOB_CONTEXT"
+    - name: Try to fail
+      run: exit 1
+
     - name: notify analytica of build
+      if: always()
       uses: andreigecanalytica/analytica.click.gh@2
       with:
         ANALYTICA_TOKEN: '${{ secrets.ANALYTICATOKEN }}'

@@ -1,0 +1,30 @@
+name: test ok
+on:
+  workflow_dispatch:
+    inputs:
+      analyticaToken:
+        description: 'api key'
+        required: true
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  testOK:
+    runs-on: ubuntu-latest
+    name: testOK
+    steps:
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+        JOB_CONTEXT: ${{ toJson(job) }}
+      run: 
+        echo "$GITHUB_CONTEXT";
+        echo "$JOB_CONTEXT"
+
+    - name: notify analytica of build
+      if: always()
+      uses: andreigecanalytica/analytica.click.gh@2
+      with:
+        ANALYTICA_TOKEN: '${{ secrets.ANALYTICATOKEN }}'
