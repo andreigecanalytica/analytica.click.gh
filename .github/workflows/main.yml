@@ -69,8 +69,3 @@ jobs:
         gh release create v2
         --generate-notes
         --title "Version ${{ github.ref_name }}"
-
-    - name: notify analytica of build
-      uses: andreigecanalytica/analytica.click.gh@v2
-      with:
-        ANALYTICA_TOKEN: '${{ secrets.ANALYTICATOKEN }}'
