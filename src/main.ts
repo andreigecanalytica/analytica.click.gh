@@ -1,7 +1,7 @@
 import * as core from '@actions/core';
 import { track } from 'analytica.click';
 
-import { IGithubContext, IJobContext } from './types';
+import type { IGithubContext, IJobContext } from './types';
 
 const getEventName = ({
   github,

@@ -4,7 +4,7 @@ import 'cross-fetch/polyfill';
 import * as core from '@actions/core';
 
 import { runParams } from './main';
-import { IGithubContext, IJobContext } from './types';
+import type { IGithubContext, IJobContext } from './types';
 
 async function run(): Promise<void> {
   const ANALYTICA_TOKEN: string = core.getInput('ANALYTICA_TOKEN');

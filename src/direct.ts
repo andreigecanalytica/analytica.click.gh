@@ -1,5 +1,5 @@
 import { runParams } from './main';
-import { IGithubContext, IJobContext } from './types';
+import type { IGithubContext, IJobContext } from './types';
 
 void runParams({
   ANALYTICA_TOKEN: 'xxx',
