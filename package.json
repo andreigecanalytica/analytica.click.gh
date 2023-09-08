@@ -17,7 +17,7 @@
   "dependencies": {
     "@actions/core": "1.10.0",
     "@types/node": "20.5.9",
-    "analytica.click": "0.0.364",
+    "analytica.click": "0.0.365",
     "cross-env": "7.0.3",
     "cross-fetch": "4.0.0",
     "esbuild": "0.19.2",
