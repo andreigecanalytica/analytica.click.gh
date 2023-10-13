@@ -9,11 +9,11 @@ dependencies:
     specifier: 1.10.1
     version: 1.10.1
   '@types/node':
-    specifier: 20.8.4
-    version: 20.8.4
+    specifier: 20.8.5
+    version: 20.8.5
   analytica.click:
-    specifier: 0.0.379
-    version: 0.0.379(@types/node@20.8.4)
+    specifier: 0.0.381
+    version: 0.0.381(@types/node@20.8.5)
   cross-env:
     specifier: 7.0.3
     version: 7.0.3
@@ -31,7 +31,7 @@ dependencies:
     version: 5.0.5
   ts-node:
     specifier: 10.9.1
-    version: 10.9.1(@types/node@20.8.4)(typescript@5.2.2)
+    version: 10.9.1(@types/node@20.8.5)(typescript@5.2.2)
   typescript:
     specifier: 5.2.2
     version: 5.2.2
@@ -1740,19 +1740,19 @@ packages:
     resolution: {integrity: sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==}
     dependencies:
       '@types/connect': 3.4.35
-      '@types/node': 20.8.4
+      '@types/node': 20.8.5
     dev: false
 
   /@types/connect@3.4.35:
     resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==}
     dependencies:
-      '@types/node': 20.8.4
+      '@types/node': 20.8.5
     dev: false
 
   /@types/express-serve-static-core@4.17.35:
     resolution: {integrity: sha512-wALWQwrgiB2AWTT91CB62b6Yt0sNHpznUXeZEcnPU3DRdlDIz74x8Qg1UUYKSVFi+va5vKOLYRBI1bRKiLLKIg==}
     dependencies:
-      '@types/node': 20.8.4
+      '@types/node': 20.8.5
       '@types/qs': 6.9.7
       '@types/range-parser': 1.2.4
       '@types/send': 0.17.1
@@ -1782,7 +1782,7 @@ packages:
   /@types/jsonwebtoken@9.0.2:
     resolution: {integrity: sha512-drE6uz7QBKq1fYqqoFKTDRdFCPHd5TCub75BM+D+cMx7NU9hUz7SESLfC2fSCXVFMO5Yj8sOWHuGqPgjc+fz0Q==}
     dependencies:
-      '@types/node': 20.8.4
+      '@types/node': 20.8.5
     dev: false
 
   /@types/mime@1.3.2:
@@ -1793,8 +1793,8 @@ packages:
     resolution: {integrity: sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==}
     dev: false
 
-  /@types/node@20.8.4:
-    resolution: {integrity: sha512-ZVPnqU58giiCjSxjVUESDtdPk4QR5WQhhINbc9UBrKLU68MX5BF6kbQzTrkwbolyr0X8ChBpXfavr5mZFKZQ5A==}
+  /@types/node@20.8.5:
+    resolution: {integrity: sha512-SPlobFgbidfIeOYlzXiEjSYeIJiOCthv+9tSQVpvk4PAdIIc+2SmjNVzWXk9t0Y7dl73Zdf+OgXKHX9XtkqUpw==}
     dependencies:
       undici-types: 5.25.3
     dev: false
@@ -1835,7 +1835,7 @@ packages:
     resolution: {integrity: sha512-Cwo8LE/0rnvX7kIIa3QHCkcuF21c05Ayb0ZfxPiv0W8VRiZiNW/WuRupHKpqqGVGf7SUA44QSOUKaEd9lIrd/Q==}
     dependencies:
       '@types/mime': 1.3.2
-      '@types/node': 20.8.4
+      '@types/node': 20.8.5
     dev: false
 
   /@types/serve-static@1.15.2:
@@ -1843,7 +1843,7 @@ packages:
     dependencies:
       '@types/http-errors': 2.0.1
       '@types/mime': 3.0.1
-      '@types/node': 20.8.4
+      '@types/node': 20.8.5
     dev: false
 
   /@typescript-eslint/eslint-plugin@6.7.5(@typescript-eslint/parser@6.7.5)(eslint@8.51.0)(typescript@5.2.2):
@@ -2058,8 +2058,8 @@ packages:
       uri-js: 4.4.1
     dev: false
 
-  /analytica.click@0.0.379(@types/node@20.8.4):
-    resolution: {integrity: sha512-496lUQ/r1J7HT2zFMApTrRrxGcHo//kmZ3FPHR2VyI3mbQqEOBSgL2jimp8q4hCSmGfTGfwqFGQWZP3u5Jbarw==}
+  /analytica.click@0.0.381(@types/node@20.8.5):
+    resolution: {integrity: sha512-H8vB1wYSqPr385DdpXRlObGyEGUxVF38bkPvcovCDXFZvnc16T7r4n/K1SyUmGugBJ7f17lbWSMfxKEM5rGOfQ==}
     dependencies:
       '@emotion/react': 11.11.1(@types/react@18.2.14)(react@18.0.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.14)(react@18.0.0)
@@ -2074,7 +2074,7 @@ packages:
       react: 18.0.0
       react-dom: 18.0.0(react@18.0.0)
       rimraf: 5.0.5
-      ts-node: 10.9.1(@types/node@20.8.4)(typescript@5.2.2)
+      ts-node: 10.9.1(@types/node@20.8.5)(typescript@5.2.2)
       typescript: 5.2.2
     transitivePeerDependencies:
       - '@aws-sdk/signature-v4-crt'
@@ -4630,7 +4630,7 @@ packages:
     resolution: {integrity: sha512-PGcnJoTBnVGy6yYNFxWVNkdcAuAMstvutN9MgDJIV6L0oG8fB+ZNNy1T+wJzah8RPGor1mZuPQkVfXNDpy9eHA==}
     dev: false
 
-  /ts-node@10.9.1(@types/node@20.8.4)(typescript@5.2.2):
+  /ts-node@10.9.1(@types/node@20.8.5)(typescript@5.2.2):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -4649,7 +4649,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.8.4
+      '@types/node': 20.8.5
       acorn: 8.9.0
       acorn-walk: 8.2.0
       arg: 4.1.3
