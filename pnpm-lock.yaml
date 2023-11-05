@@ -12,8 +12,8 @@ dependencies:
     specifier: 20.8.10
     version: 20.8.10
   analytica.click:
-    specifier: 0.0.389
-    version: 0.0.389(@types/node@20.8.10)
+    specifier: 0.0.390
+    version: 0.0.390(@types/node@20.8.10)
   cross-env:
     specifier: 7.0.3
     version: 7.0.3
@@ -2085,8 +2085,8 @@ packages:
       uri-js: 4.4.1
     dev: false
 
-  /analytica.click@0.0.389(@types/node@20.8.10):
-    resolution: {integrity: sha512-hy9YfXsHUuSBFH/T4HiihxXTD5E0uYZwGR9brrSRQQvOQLuREcECGEcgaQY08QBleWGp4Z7vvPRRCBZ28jqSVw==}
+  /analytica.click@0.0.390(@types/node@20.8.10):
+    resolution: {integrity: sha512-yEY7JLXOL0gqu7/HPMBIAGcuSHNvF+C0vvh9oeihIaYj0khzJeITuKlYTxvhi7hbJTOnpfekw6nIbG8QjHIeZA==}
     dependencies:
       '@emotion/react': 11.11.1(@types/react@18.2.14)(react@18.0.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.14)(react@18.0.0)
