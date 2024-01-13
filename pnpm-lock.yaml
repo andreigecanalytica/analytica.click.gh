@@ -12,8 +12,8 @@ dependencies:
     specifier: 20.11.0
     version: 20.11.0
   analytica.click:
-    specifier: 0.0.416
-    version: 0.0.416(@types/node@20.11.0)
+    specifier: 0.0.418
+    version: 0.0.418(@types/node@20.11.0)
   cross-env:
     specifier: 7.0.3
     version: 7.0.3
@@ -24,8 +24,8 @@ dependencies:
     specifier: 0.19.11
     version: 0.19.11
   eslint-config-e7npm:
-    specifier: 0.0.73
-    version: 0.0.73
+    specifier: 0.0.74
+    version: 0.0.74
   rimraf:
     specifier: 5.0.5
     version: 5.0.5
@@ -2127,8 +2127,8 @@ packages:
     hasBin: true
     dev: false
 
-  /ag-common@0.0.582:
-    resolution: {integrity: sha512-kgWhucU9Quxu8RzYHTInJ/Em9AVs+XkvNHVd6pDVkXoINago/mUypjbPbJbWjgk2QnqtGupatrNX+l5+RSxQkA==}
+  /ag-common@0.0.584:
+    resolution: {integrity: sha512-s4L7bFgtPl2ZO6RAbBIJs7AeXQXY32erwIoPeNKoiDd6ej5E5XjIir5FoiNFsKW7ZKyVA71cB8+2mFY5bd6rmw==}
     requiresBuild: true
     dependencies:
       '@aws-sdk/client-dynamodb': 3.450.0
@@ -2185,14 +2185,14 @@ packages:
       uri-js: 4.4.1
     dev: false
 
-  /analytica.click@0.0.416(@types/node@20.11.0):
-    resolution: {integrity: sha512-zuCPVTzdArG3GHJGNq0nFkfrpMPYLl2jctlCQx/A8jmuCR4se7k5ufrnLTftaZrU43tVcKp1eviLqs5OkhwAzw==}
+  /analytica.click@0.0.418(@types/node@20.11.0):
+    resolution: {integrity: sha512-0dazIYC1qf/TPH67MmMYQLTJAv999/DqqLxxsyXcf/bL0iWQvdLWKB4KB1nhutTFAKnYPBxibmvS6YT6WuC16w==}
     dependencies:
       '@emotion/react': 11.11.1(@types/react@18.2.14)(react@18.0.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.14)(react@18.0.0)
       '@types/jsonwebtoken': 9.0.2
       '@types/react': 18.2.14
-      ag-common: 0.0.582
+      ag-common: 0.0.584
       axios: 1.4.0
       cross-env: 7.0.3
       esbuild: 0.19.11
@@ -3140,8 +3140,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /eslint-config-e7npm@0.0.73:
-    resolution: {integrity: sha512-4nlvC7WX0KE8MXT7AmubMOxAgn8A9XrAsvpjBcMOXbba+MQXWMC5tZtVRY+KVzY3L3iAjbA/5y5ePYTPGtgEew==}
+  /eslint-config-e7npm@0.0.74:
+    resolution: {integrity: sha512-+G0PcKNXLRyyotrh5pFysJJoZ9MVFurN4cjQ3QtJ2gFDlkXW3b0zXT9tYzETM+0BpwtHRpaZH7sgIoXMB9xm/g==}
     requiresBuild: true
     dependencies:
       '@typescript-eslint/eslint-plugin': 6.18.1(@typescript-eslint/parser@6.18.1)(eslint@8.56.0)(typescript@5.3.3)
@@ -3151,12 +3151,12 @@ packages:
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.18.1)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.18.1)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@8.56.0)
-      eslint-plugin-prettier: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.1.1)
+      eslint-plugin-prettier: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.1)
       eslint-plugin-react: 7.33.2(eslint@8.56.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.56.0)
       eslint-plugin-simple-import-sort: 10.0.0(eslint@8.56.0)
       eslint-utils: 3.0.0(eslint@8.56.0)
-      prettier: 3.1.1
+      prettier: 3.2.1
       typescript: 5.3.3
     transitivePeerDependencies:
       - '@types/eslint'
@@ -3297,7 +3297,7 @@ packages:
       object.fromentries: 2.0.7
     dev: false
 
-  /eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.1.1):
+  /eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.1):
     resolution: {integrity: sha512-C9GCVAs4Eq7ZC/XFQHITLiHJxQngdtraXaM+LoUFoFp/lHNl2Zn8f3WQbe9HvTBBQ9YnKFB0/2Ajdqwo5D1EAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
@@ -3313,7 +3313,7 @@ packages:
     dependencies:
       eslint: 8.56.0
       eslint-config-prettier: 9.1.0(eslint@8.56.0)
-      prettier: 3.1.1
+      prettier: 3.2.1
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.6
     dev: false
@@ -4693,8 +4693,8 @@ packages:
       fast-diff: 1.3.0
     dev: false
 
-  /prettier@3.1.1:
-    resolution: {integrity: sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==}
+  /prettier@3.2.1:
+    resolution: {integrity: sha512-qSUWshj1IobVbKc226Gw2pync27t0Kf0EdufZa9j7uBSJay1CC+B3K5lAAZoqgX3ASiKuWsk6OmzKRetXNObWg==}
     engines: {node: '>=14'}
     hasBin: true
     dev: false
