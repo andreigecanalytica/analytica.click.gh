@@ -1,5 +1,5 @@
 import * as core from '@actions/core';
-import { track } from 'analytica.click';
+import { track } from 'analytica.click/dist/helpers/trackServer';
 
 import type { IGithubContext, IJobContext } from './types';
 
