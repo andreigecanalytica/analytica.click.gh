@@ -1,5 +1,5 @@
 import * as core from '@actions/core';
-import { track } from 'analytica.click/dist/helpers/trackServer';
+import { event } from 'analytica.click/dist/helpers/server';
 
 import type { IGithubContext, IJobContext } from './types';
 
@@ -31,7 +31,7 @@ export const runParams = async ({
       core.error('no event name calculated');
       return;
     }
-    const e = await track({
+    const e = await event({
       analyticaToken: ANALYTICA_TOKEN,
       eventName,
     });
