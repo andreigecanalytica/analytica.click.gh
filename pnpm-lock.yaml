@@ -12,8 +12,8 @@ dependencies:
     specifier: 20.11.19
     version: 20.11.19
   analytica.click:
-    specifier: 0.0.456
-    version: 0.0.456(@types/node@20.11.19)
+    specifier: 0.0.459
+    version: 0.0.459(@types/node@20.11.19)
   cross-env:
     specifier: 7.0.3
     version: 7.0.3
@@ -24,8 +24,8 @@ dependencies:
     specifier: 0.20.1
     version: 0.20.1
   eslint-config-e7npm:
-    specifier: 0.0.86
-    version: 0.0.86
+    specifier: 0.0.87
+    version: 0.0.87
   rimraf:
     specifier: 5.0.5
     version: 5.0.5
@@ -2185,23 +2185,20 @@ packages:
       uri-js: 4.4.1
     dev: false
 
-  /analytica.click@0.0.456(@types/node@20.11.19):
-    resolution: {integrity: sha512-i9T65Rk7q1nBDSoP6oPweIPWCrDw5sPsWrMSbtejiZggRuOxDCSfRB6i2r0MAqoFkU/1QANlU3V5vRFzs7zj8A==}
+  /analytica.click@0.0.459(@types/node@20.11.19):
+    resolution: {integrity: sha512-TvAFoKvMGPUyHqOCRNkwuaNFN+sIn+12KCTKSWvUPPMnFBkBYKmTue7o7Ks0zh2yMjLuT2wQYnOLsnwK9NUcSg==}
     dependencies:
       '@emotion/react': 11.11.1(@types/react@18.2.14)(react@18.0.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.14)(react@18.0.0)
-      '@types/jsonwebtoken': 9.0.2
       '@types/react': 18.2.14
       ag-common: 0.0.634
-      axios: 1.4.0
       cross-env: 7.0.3
+      cross-fetch: 4.0.0
       esbuild: 0.20.1
       esbuild-plugin-d.ts: 1.1.0(ts-node@10.9.2)(typescript@5.3.3)
       glob: 10.3.10
-      jsonwebtoken: 9.0.0
       nodemon: 3.0.1
       react: 18.0.0
-      react-dom: 18.0.0(react@18.0.0)
       rimraf: 5.0.5
       ts-node: 10.9.2(@types/node@20.11.19)(typescript@5.3.3)
       typescript: 5.3.3
@@ -2211,6 +2208,7 @@ packages:
       - '@types/node'
       - aws-crt
       - debug
+      - encoding
       - postcss
       - supports-color
     dev: false
@@ -3141,8 +3139,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /eslint-config-e7npm@0.0.86:
-    resolution: {integrity: sha512-oKe8Y2dMU+MVAlL9ZF9gSjHrGBPJeXfs38FWGvE0fi9hS8let927800xaKBUPdvHoKewN+9gvd1Kwf/wpsApTQ==}
+  /eslint-config-e7npm@0.0.87:
+    resolution: {integrity: sha512-YVvpqXm+WUKP9guDXSljlVRkJm4kCH835oNcDHjKWtgVJB0kbfyndeOB5POfIhL0TMPXEL3USdYRUnxSnW1AGQ==}
     requiresBuild: true
     dependencies:
       '@typescript-eslint/eslint-plugin': 7.0.2(@typescript-eslint/parser@7.0.2)(eslint@8.56.0)(typescript@5.3.3)
