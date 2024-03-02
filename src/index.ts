@@ -19,13 +19,8 @@ async function run(): Promise<void> {
     return;
   }
 
-  if (!github?.repository) {
+  if (!github.repository) {
     core.warning('missing github context');
-    return;
-  }
-
-  if (!job.status) {
-    core.warning('missing job context');
     return;
   }
 
