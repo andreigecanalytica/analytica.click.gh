@@ -12,8 +12,8 @@ dependencies:
     specifier: 20.11.24
     version: 20.11.24
   analytica.click:
-    specifier: 0.0.462
-    version: 0.0.462(@types/node@20.11.24)
+    specifier: 0.0.464
+    version: 0.0.464(@types/node@20.11.24)
   cross-env:
     specifier: 7.0.3
     version: 7.0.3
@@ -24,8 +24,8 @@ dependencies:
     specifier: 0.20.1
     version: 0.20.1
   eslint-config-e7npm:
-    specifier: 0.0.89
-    version: 0.0.89
+    specifier: 0.0.91
+    version: 0.0.91
   rimraf:
     specifier: 5.0.5
     version: 5.0.5
@@ -2127,8 +2127,8 @@ packages:
     hasBin: true
     dev: false
 
-  /ag-common@0.0.644:
-    resolution: {integrity: sha512-INWbVBtzvG1BC4OXXNY+47p5rT3vKa3SYLGBzX/bWuYteEko+Tm6hCwfHomPHrOrtN8Pi/AmjL/hd4c9NwiMjA==}
+  /ag-common@0.0.654:
+    resolution: {integrity: sha512-Vr/URKtMcXsif4h9vd5gfz+QdHLDGPeCY35AHRNdvPfjp6XR8Fn04Xrw707Sz/1HJtq6nNDn75uZSag/jvQwcA==}
     requiresBuild: true
     dependencies:
       '@aws-sdk/client-dynamodb': 3.450.0
@@ -2185,13 +2185,13 @@ packages:
       uri-js: 4.4.1
     dev: false
 
-  /analytica.click@0.0.462(@types/node@20.11.24):
-    resolution: {integrity: sha512-uhvFRnHDquSbTlZz/Cxdzp2cVgm5WueEwmGZrTKsNxy4NKYAisAlWvnuUOaMZCcYDyjB3oL5eycFeL7H9lGOVQ==}
+  /analytica.click@0.0.464(@types/node@20.11.24):
+    resolution: {integrity: sha512-FM3yFUwre1iyUwFs0NhOcrHsu00UNkTQipvbqE5irpV23eOGvx5MTET/xlvFhLE3m+yiNkabN3DIDNtj6L3zOQ==}
     dependencies:
       '@emotion/react': 11.11.1(@types/react@18.2.14)(react@18.0.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.14)(react@18.0.0)
       '@types/react': 18.2.14
-      ag-common: 0.0.644
+      ag-common: 0.0.654
       cross-env: 7.0.3
       cross-fetch: 4.0.0
       esbuild: 0.20.1
@@ -3139,8 +3139,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /eslint-config-e7npm@0.0.89:
-    resolution: {integrity: sha512-TqRYAGq2lcVb+u4Sq07NIBFVDUEvCkM76rpKZNyR2V+n0Bb8Zyxw9QpsZbFdDYZM/mxuuJxbKyx4i8bb+ZYz1A==}
+  /eslint-config-e7npm@0.0.91:
+    resolution: {integrity: sha512-Oql7xidTsM8nCJ6k9s5u/3zNLtJ9gZU7gVGqQitDkZBL7KD2OwQol0ydj59rw/LZE2osyRv9GdMqtVEo5AosyQ==}
     requiresBuild: true
     dependencies:
       '@typescript-eslint/eslint-plugin': 7.1.0(@typescript-eslint/parser@7.1.0)(eslint@8.57.0)(typescript@5.3.3)
