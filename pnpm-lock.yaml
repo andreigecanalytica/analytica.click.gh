@@ -12,8 +12,8 @@ dependencies:
     specifier: 20.11.24
     version: 20.11.24
   analytica.click:
-    specifier: 0.0.464
-    version: 0.0.464(@types/node@20.11.24)
+    specifier: 0.0.465
+    version: 0.0.465(@types/node@20.11.24)
   cross-env:
     specifier: 7.0.3
     version: 7.0.3
@@ -2127,8 +2127,8 @@ packages:
     hasBin: true
     dev: false
 
-  /ag-common@0.0.654:
-    resolution: {integrity: sha512-Vr/URKtMcXsif4h9vd5gfz+QdHLDGPeCY35AHRNdvPfjp6XR8Fn04Xrw707Sz/1HJtq6nNDn75uZSag/jvQwcA==}
+  /ag-common@0.0.659:
+    resolution: {integrity: sha512-3hpdt9JBL2aO2SSjWJRbEXEbU7G6mOqGENXdfSF4VRQGC6Wqbcsv68nvX3L+gOMyJ7V+v1TLsC8gqDHnJE6tJA==}
     requiresBuild: true
     dependencies:
       '@aws-sdk/client-dynamodb': 3.450.0
@@ -2185,13 +2185,13 @@ packages:
       uri-js: 4.4.1
     dev: false
 
-  /analytica.click@0.0.464(@types/node@20.11.24):
-    resolution: {integrity: sha512-FM3yFUwre1iyUwFs0NhOcrHsu00UNkTQipvbqE5irpV23eOGvx5MTET/xlvFhLE3m+yiNkabN3DIDNtj6L3zOQ==}
+  /analytica.click@0.0.465(@types/node@20.11.24):
+    resolution: {integrity: sha512-b3vcX2RUJ18qqOioQ5iQZYriMeHvENKrq3cjEtdg3gfFXxBiFmsJCYT4zPNeM2Yl1Ei+bVzbvQlHP27uROFyXQ==}
     dependencies:
       '@emotion/react': 11.11.1(@types/react@18.2.14)(react@18.0.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.14)(react@18.0.0)
       '@types/react': 18.2.14
-      ag-common: 0.0.654
+      ag-common: 0.0.659
       cross-env: 7.0.3
       cross-fetch: 4.0.0
       esbuild: 0.20.1
@@ -4111,6 +4111,7 @@ packages:
 
   /jose@4.14.4:
     resolution: {integrity: sha512-j8GhLiKmUAh+dsFXlX1aJCbt5KMibuKb+d7j1JaOJG6s2UjX1PQlW+OKB/sD4a/5ZYF4RcmYmLSndOoU3Lt/3g==}
+    deprecated: this version is no longer supported
     dev: false
 
   /joycon@3.1.1:
