@@ -19,11 +19,11 @@
   "dependencies": {
     "@actions/core": "1.10.1",
     "@types/node": "20.12.2",
-    "analytica.click": "0.0.467",
+    "analytica.click": "0.0.469",
     "cross-env": "7.0.3",
     "cross-fetch": "4.0.0",
     "esbuild": "0.20.2",
-    "eslint-config-e7npm": "0.0.94",
+    "eslint-config-e7npm": "0.0.95",
     "rimraf": "5.0.5",
     "ts-node": "10.9.2",
     "typescript": "5.4.3"
