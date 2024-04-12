@@ -24,8 +24,8 @@ dependencies:
     specifier: 0.20.2
     version: 0.20.2
   eslint-config-e7npm:
-    specifier: 0.0.97
-    version: 0.0.97
+    specifier: 0.0.98
+    version: 0.0.98
   rimraf:
     specifier: 5.0.5
     version: 5.0.5
@@ -2905,8 +2905,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /eslint-config-e7npm@0.0.97:
-    resolution: {integrity: sha512-+TTIEaxwSJFikkXUFjy6M0ED6arvLPiGEmvK1RWYxyRUDCRE8IQDaeCa7wTXBwD/XSp4S/UclINa1Y7bjx+LSw==}
+  /eslint-config-e7npm@0.0.98:
+    resolution: {integrity: sha512-6f/BRlVVYpJFDnpbYbtSqFQxULVRP2i41VtF18kPqnE/hyDoviIFOeZgcQ7fA+bcG1W60u9r3+vGt4HnN1C5iQ==}
     requiresBuild: true
     dependencies:
       '@typescript-eslint/eslint-plugin': 7.5.0(@typescript-eslint/parser@7.5.0)(eslint@8.57.0)(typescript@5.4.4)
