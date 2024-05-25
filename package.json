@@ -22,7 +22,7 @@
     "analytica.click": "0.0.480",
     "cross-env": "7.0.3",
     "cross-fetch": "4.0.0",
-    "esbuild": "0.21.3",
+    "esbuild": "0.21.4",
     "eslint-config-e7npm": "0.0.103",
     "rimraf": "5.0.7",
     "ts-node": "10.9.2",
