@@ -15,8 +15,8 @@ importers:
         specifier: 20.13.0
         version: 20.13.0
       analytica.click:
-        specifier: 0.0.481
-        version: 0.0.481(@types/node@20.13.0)
+        specifier: 0.0.482
+        version: 0.0.482(@types/node@20.13.0)
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -881,8 +881,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  ag-common@0.0.711:
-    resolution: {integrity: sha512-IhqiYPmjpYyR4UvRgjpgnvhNvnT40tqrfiI527lGNh31XrTJ2jcgFMoq66tj/E21YADo1d08SqbBV7gBeqjUpw==}
+  ag-common@0.0.714:
+    resolution: {integrity: sha512-8Zc92378nmIK7TUkjO9QgjMTH1EnR4yc9CCJ2aBYf7YoNCAayfO7Ltn0V7Z1DAHTxGFx+RdRkyeGx9pDSVEVBw==}
 
   ajv-formats@2.1.1:
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
@@ -898,8 +898,8 @@ packages:
   ajv@8.12.0:
     resolution: {integrity: sha512-sRu1kpcO9yLtYxBKvqfTeh9KzZEwO3STyX1HT+4CaDzC6HpTGYhIhPIzj9XuKU7KYDwnaeh5hcOwjy1QuJzBPA==}
 
-  analytica.click@0.0.481:
-    resolution: {integrity: sha512-fDjtYtn4IBhLZDnysiH3slxFV6+qe5992F6cVWqAL54fTaYRmqr0Jcm1L1Atx8MXMCJNy+Der/G+anj2thuzMw==}
+  analytica.click@0.0.482:
+    resolution: {integrity: sha512-19ejmhEV9fICSZS0ITNVWF8254anaD6Dd7lpF2vccEeS9REt9UOFk75KO0VO4wQJ9u36P1iz/v2rEyqBTMq+tg==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -3861,7 +3861,7 @@ snapshots:
 
   acorn@8.9.0: {}
 
-  ag-common@0.0.711:
+  ag-common@0.0.714:
     dependencies:
       '@aws-sdk/client-dynamodb': 3.450.0
       '@aws-sdk/client-s3': 3.450.0
@@ -3905,12 +3905,12 @@ snapshots:
       require-from-string: 2.0.2
       uri-js: 4.4.1
 
-  analytica.click@0.0.481(@types/node@20.13.0):
+  analytica.click@0.0.482(@types/node@20.13.0):
     dependencies:
       '@emotion/react': 11.11.1(@types/react@18.2.14)(react@18.0.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1(react@18.0.0))(@types/react@18.2.14)(react@18.0.0)
       '@types/react': 18.2.14
-      ag-common: 0.0.711
+      ag-common: 0.0.714
       cross-env: 7.0.3
       cross-fetch: 4.0.0
       nodemon: 3.0.1
