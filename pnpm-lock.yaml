@@ -15,8 +15,8 @@ importers:
         specifier: 20.14.2
         version: 20.14.2
       analytica.click:
-        specifier: 0.0.482
-        version: 0.0.482(@types/node@20.14.2)
+        specifier: 0.0.485
+        version: 0.0.485(@types/node@20.14.2)
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -508,6 +508,7 @@ packages:
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
+    deprecated: Use @eslint/config-array instead
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -515,6 +516,7 @@ packages:
 
   '@humanwhocodes/object-schema@2.0.2':
     resolution: {integrity: sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==}
+    deprecated: Use @eslint/object-schema instead
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -898,8 +900,8 @@ packages:
   ajv@8.12.0:
     resolution: {integrity: sha512-sRu1kpcO9yLtYxBKvqfTeh9KzZEwO3STyX1HT+4CaDzC6HpTGYhIhPIzj9XuKU7KYDwnaeh5hcOwjy1QuJzBPA==}
 
-  analytica.click@0.0.482:
-    resolution: {integrity: sha512-19ejmhEV9fICSZS0ITNVWF8254anaD6Dd7lpF2vccEeS9REt9UOFk75KO0VO4wQJ9u36P1iz/v2rEyqBTMq+tg==}
+  analytica.click@0.0.485:
+    resolution: {integrity: sha512-Fpsq+kA/KTXnUD1zK//OyMGbmFGbiBFnhj0R2VpV80DdwrlzENpGTAp2XSBE8QJ9OUNhoatApyQylLnWu/qnng==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -3905,7 +3907,7 @@ snapshots:
       require-from-string: 2.0.2
       uri-js: 4.4.1
 
-  analytica.click@0.0.482(@types/node@20.14.2):
+  analytica.click@0.0.485(@types/node@20.14.2):
     dependencies:
       '@emotion/react': 11.11.1(@types/react@18.2.14)(react@18.0.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1(react@18.0.0))(@types/react@18.2.14)(react@18.0.0)
