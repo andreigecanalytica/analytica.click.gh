@@ -24,7 +24,7 @@
     "cross-fetch": "4.0.0",
     "esbuild": "0.23.0",
     "eslint-config-e7npm": "0.0.110",
-    "rimraf": "5.0.8",
+    "rimraf": "5.0.9",
     "ts-node": "10.9.2",
     "typescript": "5.5.3"
   },
