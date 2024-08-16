@@ -15,8 +15,8 @@ importers:
         specifier: 20.14.15
         version: 20.14.15
       analytica.click:
-        specifier: 0.0.485
-        version: 0.0.485(@types/node@20.14.15)
+        specifier: 0.0.486
+        version: 0.0.486(@types/node@20.14.15)
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -889,8 +889,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  ag-common@0.0.714:
-    resolution: {integrity: sha512-8Zc92378nmIK7TUkjO9QgjMTH1EnR4yc9CCJ2aBYf7YoNCAayfO7Ltn0V7Z1DAHTxGFx+RdRkyeGx9pDSVEVBw==}
+  ag-common@0.0.719:
+    resolution: {integrity: sha512-DUIi4OvcLS2cw/5ZX4GnmmJxs6tRCvOkqc9H24Ba2ZPGjbPC2Kes+hl1NmcHuacOVqEZtJjtqWaSfD6ZCwUsMQ==}
 
   ajv-formats@2.1.1:
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
@@ -906,8 +906,8 @@ packages:
   ajv@8.12.0:
     resolution: {integrity: sha512-sRu1kpcO9yLtYxBKvqfTeh9KzZEwO3STyX1HT+4CaDzC6HpTGYhIhPIzj9XuKU7KYDwnaeh5hcOwjy1QuJzBPA==}
 
-  analytica.click@0.0.485:
-    resolution: {integrity: sha512-Fpsq+kA/KTXnUD1zK//OyMGbmFGbiBFnhj0R2VpV80DdwrlzENpGTAp2XSBE8QJ9OUNhoatApyQylLnWu/qnng==}
+  analytica.click@0.0.486:
+    resolution: {integrity: sha512-7XzrOjKztiJSVhZ8zq82fcXp/TNBW0OP2QA/A3sL9nv0YmzJL52m0Gz6lYO7YZggxSWK3bFv2VbQuXfwemrivw==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -3747,7 +3747,7 @@ snapshots:
 
   acorn@8.9.0: {}
 
-  ag-common@0.0.714:
+  ag-common@0.0.719:
     dependencies:
       '@aws-sdk/client-dynamodb': 3.450.0
       '@aws-sdk/client-s3': 3.450.0
@@ -3791,12 +3791,12 @@ snapshots:
       require-from-string: 2.0.2
       uri-js: 4.4.1
 
-  analytica.click@0.0.485(@types/node@20.14.15):
+  analytica.click@0.0.486(@types/node@20.14.15):
     dependencies:
       '@emotion/react': 11.11.1(@types/react@18.2.14)(react@18.0.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1(react@18.0.0))(@types/react@18.2.14)(react@18.0.0)
       '@types/react': 18.2.14
-      ag-common: 0.0.714
+      ag-common: 0.0.719
       cross-env: 7.0.3
       cross-fetch: 4.0.0
       nodemon: 3.0.1
