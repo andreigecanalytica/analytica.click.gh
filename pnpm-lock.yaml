@@ -15,8 +15,8 @@ importers:
         specifier: 22.5.0
         version: 22.5.0
       analytica.click:
-        specifier: 0.0.488
-        version: 0.0.488(@types/node@22.5.0)
+        specifier: 0.0.489
+        version: 0.0.489(@types/node@22.5.0)
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -906,8 +906,8 @@ packages:
   ajv@8.12.0:
     resolution: {integrity: sha512-sRu1kpcO9yLtYxBKvqfTeh9KzZEwO3STyX1HT+4CaDzC6HpTGYhIhPIzj9XuKU7KYDwnaeh5hcOwjy1QuJzBPA==}
 
-  analytica.click@0.0.488:
-    resolution: {integrity: sha512-pxNsblTlTJqLUWKCsk+PdJAZ62G8B24QwhDG8wFk0tW6Q/1k9Jd+ZlZulEIVXIsf+ROQiFCAJl0ATIaQzWgD6w==}
+  analytica.click@0.0.489:
+    resolution: {integrity: sha512-By5RoHkfV320eGI49Z1ukMZeaDjyGg1m6AztKU3bJpCBFQaDuRFUGtPhUB08DC9VNt6vy+1WdHj1g3WaGIyE1g==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -3799,7 +3799,7 @@ snapshots:
       require-from-string: 2.0.2
       uri-js: 4.4.1
 
-  analytica.click@0.0.488(@types/node@22.5.0):
+  analytica.click@0.0.489(@types/node@22.5.0):
     dependencies:
       '@emotion/react': 11.11.1(@types/react@18.2.14)(react@18.0.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1(react@18.0.0))(@types/react@18.2.14)(react@18.0.0)
