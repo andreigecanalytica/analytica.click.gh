@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@actions/core": "1.11.1",
-    "@types/node": "22.8.6",
+    "@types/node": "22.9.0",
     "analytica.click": "0.0.490",
     "cross-env": "7.0.3",
     "cross-fetch": "4.0.0",
