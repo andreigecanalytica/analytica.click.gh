@@ -40,7 +40,7 @@ export const runParams = async ({
     } else {
       core.info('Tracked event to analytica.click successfully:' + eventName);
     }
-  } catch (error) {
+  } catch {
     //never fail
     //if (error instanceof Error) core.setFailed(error.message);
   }

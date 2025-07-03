@@ -8,10 +8,8 @@
   "license": "ISC",
   "private": false,
   "scripts": {
-    "format": "eslint --ext .ts,.tsx src --fix",
-    "lint:tsc": "tsc --noEmit",
-    "lint:eslint": "eslint --ext .ts,.tsx src",
-    "lint": "pnpm run /^lint:/",
+    "lint": "eslint src",
+    "format": "eslint src --fix",
     "build-direct": "rimraf .build && rimraf dist && cross-env NODE_ENV=prod ts-node esbuild",
     "build": "pnpm run lint && pnpm build-direct",
     "start": "ts-node src/direct.ts"
@@ -33,5 +31,8 @@
     "yarn": "use pnpm",
     "npm": "use pnpm",
     "pnpm": ">=8.6"
+  },
+  "devDependencies": {
+    "eslint": "^9.30.1"
   }
 }
