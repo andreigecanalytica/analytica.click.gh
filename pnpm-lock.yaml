@@ -15,8 +15,8 @@ importers:
         specifier: 22.17.1
         version: 22.17.1
       analytica.click:
-        specifier: 0.0.518
-        version: 0.0.518(@types/node@22.17.1)
+        specifier: 0.0.521
+        version: 0.0.521(@types/node@22.17.1)
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -370,6 +370,9 @@ packages:
 
   '@emnapi/wasi-threads@1.0.2':
     resolution: {integrity: sha512-5n3nTJblwRi8LlXkJ9eBzu+kZR8Yxcc7ubakyQTFzPMtIhFpUBRbsnc2Dv88IZDIbCDlBiWrknhB4Lsz7mg6BA==}
+
+  '@epic-web/invariant@1.0.0':
+    resolution: {integrity: sha512-lrTPqgvfFQtR/eY/qkIzp98OGdNJu0m5ji3q/nJI8v3SXkRKEnWiOxMmbvcSoAIzv/cGiuvRy57k4suKQSAdwA==}
 
   '@esbuild/aix-ppc64@0.25.8':
     resolution: {integrity: sha512-urAvrUedIqEiFR3FYSLTWQgLu5tb+m0qZw0NBEasUeo6wuqatkMDaRT+1uABiGXEu5vqgPd7FGE1BhsAIy9QVA==}
@@ -1083,8 +1086,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  ag-common@0.0.751:
-    resolution: {integrity: sha512-fRz03Tgm67Ce47RwCW242PD66KoDVF/KIOzHaOXKrEGYLd0EB3T+llWeg/ydiQiUo06HSUrksBqQ4vHZm5hrbg==}
+  ag-common@0.0.757:
+    resolution: {integrity: sha512-LYu/teIfM3BAjFS3GkkgArN/BKQkWOBTOJ23WxSEMdWLoKccTsfq2CjVnqNxp/AXmo/srWc5dPdFCOpfhZcwDQ==}
 
   ajv-formats@2.1.1:
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
@@ -1100,8 +1103,8 @@ packages:
   ajv@8.17.1:
     resolution: {integrity: sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==}
 
-  analytica.click@0.0.518:
-    resolution: {integrity: sha512-cZRiqj/bUItI74unOCbvp5a3DL4O05FXq8osuDqIVu1PsJCmlyiIMd2mcBqtWBpVdlBeFFTgj7XeCN2vDL2UqQ==}
+  analytica.click@0.0.521:
+    resolution: {integrity: sha512-yjTNsKA9ZmmkQHzoAKR/ySNLSzW3wgL8P301S6BY2j8UoeY6ByJ4q4Bjyoqs4+4E9X7BU4bMYC3yqRrgBb+oxw==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -1284,6 +1287,11 @@ packages:
 
   create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
+
+  cross-env@10.0.0:
+    resolution: {integrity: sha512-aU8qlEK/nHYtVuN4p7UQgAwVljzMg8hB4YK5ThRqD2l/ziSnryncPNn7bMLt5cFYsKVKBh8HqLqyCoTupEUu7Q==}
+    engines: {node: '>=20'}
+    hasBin: true
 
   cross-env@7.0.3:
     resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
@@ -3604,6 +3612,8 @@ snapshots:
       tslib: 2.6.2
     optional: true
 
+  '@epic-web/invariant@1.0.0': {}
+
   '@esbuild/aix-ppc64@0.25.8':
     optional: true
 
@@ -4361,7 +4371,7 @@ snapshots:
 
   acorn@8.15.0: {}
 
-  ag-common@0.0.751:
+  ag-common@0.0.757:
     dependencies:
       '@aws-sdk/client-apigatewaymanagementapi': 3.840.0
       '@aws-sdk/client-dynamodb': 3.830.0
@@ -4406,11 +4416,11 @@ snapshots:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
 
-  analytica.click@0.0.518(@types/node@22.17.1):
+  analytica.click@0.0.521(@types/node@22.17.1):
     dependencies:
       '@types/react': 19.1.8
-      ag-common: 0.0.751
-      cross-env: 7.0.3
+      ag-common: 0.0.757
+      cross-env: 10.0.0
       cross-fetch: 4.1.0
       nodemon: 3.0.1
       react: 19.1.0
@@ -4620,6 +4630,11 @@ snapshots:
   content-type@1.0.5: {}
 
   create-require@1.1.1: {}
+
+  cross-env@10.0.0:
+    dependencies:
+      '@epic-web/invariant': 1.0.0
+      cross-spawn: 7.0.6
 
   cross-env@7.0.3:
     dependencies:
