@@ -15,8 +15,8 @@ importers:
         specifier: 22.17.2
         version: 22.17.2
       analytica.click:
-        specifier: 0.0.524
-        version: 0.0.524(@types/node@22.17.2)
+        specifier: 0.0.527
+        version: 0.0.527(@types/node@22.17.2)
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -1009,8 +1009,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  ag-common@0.0.759:
-    resolution: {integrity: sha512-ILVCBx5O9af+DwhnBE9b2AnBwBbC3c8IwiBLqhrzEI1hu3eB2B7sIMWTNs+3CCLnL3VksHL4Mmp+PYESxqzA0g==}
+  ag-common@0.0.760:
+    resolution: {integrity: sha512-PVaO0+U9nbpfSNCjJOBcE6tp2pNY+wV7qeBicu3Vvi9SAsejRp35K7yE3Q9AfOJvz8PnyJrM6cyox2iRnuviqQ==}
 
   ajv-formats@2.1.1:
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
@@ -1026,8 +1026,8 @@ packages:
   ajv@8.17.1:
     resolution: {integrity: sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==}
 
-  analytica.click@0.0.524:
-    resolution: {integrity: sha512-n0awS4HKknHSspHHSFiOR9hSvmZ7RvxPJNGqtkVvnvWNF1MkdjyV6Y5MB+gJ976ysl2josKI3UtkyvzyXSm7AQ==}
+  analytica.click@0.0.527:
+    resolution: {integrity: sha512-iVjVW2QxBVF2V6LiEA0pKd8HSxif7OaRxf1HGEv8khbQTFXYh6GbjGiSuDp7p6raB+62WXhUgCcVIJX1LN61iA==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -4035,7 +4035,7 @@ snapshots:
 
   acorn@8.15.0: {}
 
-  ag-common@0.0.759:
+  ag-common@0.0.760:
     dependencies:
       '@aws-sdk/client-apigatewaymanagementapi': 3.872.0
       '@aws-sdk/client-dynamodb': 3.872.0
@@ -4080,10 +4080,10 @@ snapshots:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
 
-  analytica.click@0.0.524(@types/node@22.17.2):
+  analytica.click@0.0.527(@types/node@22.17.2):
     dependencies:
       '@types/react': 19.1.8
-      ag-common: 0.0.759
+      ag-common: 0.0.760
       cross-env: 10.0.0
       cross-fetch: 4.1.0
       nodemon: 3.0.1
