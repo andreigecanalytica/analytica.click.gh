@@ -27,8 +27,8 @@ importers:
         specifier: 0.25.9
         version: 0.25.9
       eslint-config-e7npm:
-        specifier: 0.1.24
-        version: 0.1.24
+        specifier: 0.1.25
+        version: 0.1.25
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -1305,8 +1305,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-e7npm@0.1.24:
-    resolution: {integrity: sha512-xLM7NVZd66sP9gMx0QOYaHJcVJ+XT1JO0KeGsHIsvv0peTlSs0qKRRqXlMv+hpKer1QDXW/u+atAw+rQsAi4Vg==}
+  eslint-config-e7npm@0.1.25:
+    resolution: {integrity: sha512-bneY8Lfx+u0/AHjUYmx6OH98uO1AbFk0PueLf7zIO++CwKX33F/q6Ya038aEhorVqoKUjaGEW19+Zh041wF0NQ==}
 
   eslint-config-prettier@10.1.5:
     resolution: {integrity: sha512-zc1UmCpNltmVY34vuLRV61r1K27sWuX39E+uyUnY8xS2Bex88VV9cugG+UZbRSRGtGyFboj+D8JODyme1plMpw==}
@@ -4393,7 +4393,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-e7npm@0.1.24:
+  eslint-config-e7npm@0.1.25:
     dependencies:
       '@next/eslint-plugin-next': 15.3.4
       '@typescript-eslint/eslint-plugin': 8.35.1(@typescript-eslint/parser@8.35.1(eslint@9.35.0)(typescript@5.9.2))(eslint@9.35.0)(typescript@5.9.2)
