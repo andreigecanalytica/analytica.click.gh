@@ -15,8 +15,8 @@ importers:
         specifier: 22.18.1
         version: 22.18.1
       analytica.click:
-        specifier: 0.0.533
-        version: 0.0.533(@types/node@22.18.1)(constructs@10.4.2)
+        specifier: 0.0.536
+        version: 0.0.536(@types/node@22.18.1)(constructs@10.4.2)
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -1065,8 +1065,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  ag-common@0.0.767:
-    resolution: {integrity: sha512-4YP9zIXGqu3ufjqC/Rla4Sls9HCiSHasBFkwnKXYa69Iz3p1xyCbxXkvfRp++BFLXo2VBUWukDwBkIeY0rPnpg==}
+  ag-common@0.0.769:
+    resolution: {integrity: sha512-KVZ5frZShpAE2NIxuRnaEdNlTZpj1UKT9+Z2YkxEk4kDfBy1M0/jFvTCzqHKiraxv45i6Dgm/S/ji7+9lfXWZw==}
 
   agent-base@7.1.4:
     resolution: {integrity: sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==}
@@ -1075,8 +1075,8 @@ packages:
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
-  analytica.click@0.0.533:
-    resolution: {integrity: sha512-95fldfUCKHJHk/eqwHX1YVg8JV+AD0FbO5q+cROw0g7v7ocWGoL8r2layGAbGR0eF+dHdxa8FIxx56y+hsofaw==}
+  analytica.click@0.0.536:
+    resolution: {integrity: sha512-thCvNHtAUzeYzCiHElx0p0fzqMQDalmM14Ogj49fPmEFyrHjHD/ulblg4VpN1hVL/s7jPuOjuN+B7c0lIBKTbA==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -4174,7 +4174,7 @@ snapshots:
 
   acorn@8.15.0: {}
 
-  ag-common@0.0.767(constructs@10.4.2):
+  ag-common@0.0.769(constructs@10.4.2):
     dependencies:
       '@aws-sdk/client-apigatewaymanagementapi': 3.879.0
       '@aws-sdk/client-dynamodb': 3.879.0
@@ -4207,10 +4207,10 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  analytica.click@0.0.533(@types/node@22.18.1)(constructs@10.4.2):
+  analytica.click@0.0.536(@types/node@22.18.1)(constructs@10.4.2):
     dependencies:
       '@types/react': 19.1.8
-      ag-common: 0.0.767(constructs@10.4.2)
+      ag-common: 0.0.769(constructs@10.4.2)
       cross-env: 10.0.0
       cross-fetch: 4.1.0
       nodemon: 3.0.1
