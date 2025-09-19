@@ -15,8 +15,8 @@ importers:
         specifier: 22.18.1
         version: 22.18.1
       analytica.click:
-        specifier: 0.0.536
-        version: 0.0.536(@types/node@22.18.1)(constructs@10.4.2)
+        specifier: 0.0.539
+        version: 0.0.539(@types/node@22.18.1)(constructs@10.4.2)
       cross-env:
         specifier: 7.0.3
         version: 7.0.3
@@ -1075,8 +1075,8 @@ packages:
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
-  analytica.click@0.0.536:
-    resolution: {integrity: sha512-thCvNHtAUzeYzCiHElx0p0fzqMQDalmM14Ogj49fPmEFyrHjHD/ulblg4VpN1hVL/s7jPuOjuN+B7c0lIBKTbA==}
+  analytica.click@0.0.539:
+    resolution: {integrity: sha512-1/GPl1ADeCbsAri790kQvSN2hCUQmXKOSIdwln30QjRPEL6coBB8RQG3WjHfFj+7Tm6c7YZW3++qDXEWTinwTg==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -4207,7 +4207,7 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  analytica.click@0.0.536(@types/node@22.18.1)(constructs@10.4.2):
+  analytica.click@0.0.539(@types/node@22.18.1)(constructs@10.4.2):
     dependencies:
       '@types/react': 19.1.8
       ag-common: 0.0.769(constructs@10.4.2)
