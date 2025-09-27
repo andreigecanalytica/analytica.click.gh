@@ -16,9 +16,9 @@
   },
   "dependencies": {
     "@actions/core": "1.11.1",
-    "@types/node": "22.18.6",
+    "@types/node": "24.5.2",
     "analytica.click": "0.0.542",
-    "cross-env": "7.0.3",
+    "cross-env": "10.0.0",
     "cross-fetch": "4.1.0",
     "esbuild": "0.25.10",
     "eslint-config-e7npm": "0.1.25",
