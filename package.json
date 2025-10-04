@@ -16,15 +16,15 @@
   },
   "dependencies": {
     "@actions/core": "1.11.1",
-    "@types/node": "24.5.2",
+    "@types/node": "24.6.2",
     "analytica.click": "0.0.544",
-    "cross-env": "10.0.0",
+    "cross-env": "10.1.0",
     "cross-fetch": "4.1.0",
     "esbuild": "0.25.10",
     "eslint-config-e7npm": "0.1.25",
     "rimraf": "6.0.1",
     "ts-node": "10.9.2",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "engines": {
     "node": ">=18",
