@@ -15,8 +15,8 @@ importers:
         specifier: 24.9.2
         version: 24.9.2
       analytica.click:
-        specifier: 0.0.560
-        version: 0.0.560(@types/eslint@9.6.1)(@types/node@24.9.2)(jiti@2.6.1)(postcss@8.5.6)
+        specifier: 0.0.561
+        version: 0.0.561(@types/eslint@9.6.1)(@types/node@24.9.2)(jiti@2.6.1)(postcss@8.5.6)
       cross-env:
         specifier: 10.1.0
         version: 10.1.0
@@ -645,8 +645,8 @@ packages:
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
-  analytica.click@0.0.560:
-    resolution: {integrity: sha512-JFOWPHJy3lP8tS76sqsLuPb/G961ZDTw/lzx+aWTBM56YyR/rcYsXgcXnL6+8WdObjMWsCiAu+vGnOd9Wf71Eg==}
+  analytica.click@0.0.561:
+    resolution: {integrity: sha512-AF5g8TIWEyiHv9qIejr/JnvDqa8kjRIvP7zNZd49Y2S5DdF99bblvUnxvaJlhcApi+oHq3mRmqt1M9MQCK5oiA==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -2636,7 +2636,7 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  analytica.click@0.0.560(@types/eslint@9.6.1)(@types/node@24.9.2)(jiti@2.6.1)(postcss@8.5.6):
+  analytica.click@0.0.561(@types/eslint@9.6.1)(@types/node@24.9.2)(jiti@2.6.1)(postcss@8.5.6):
     dependencies:
       '@types/react': 19.1.8
       ag-common: 0.0.794(@types/eslint@9.6.1)(jiti@2.6.1)(postcss@8.5.6)
