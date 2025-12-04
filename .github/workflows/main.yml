@@ -56,7 +56,7 @@ jobs:
     - name: Update git
       run: |
         git config user.name "GitHub Actions Bot"
-        git config user.email "<>"
+        git config user.email "andreigec+analytica@hotmail.com"
         git add --force dist || true;
         git commit -m "updated dist (CI)" || true;
         git push || true;
