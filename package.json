@@ -7,6 +7,10 @@
   "author": " <help@analytica.click> (analytica.click)",
   "license": "ISC",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreigecanalytica/analytica.click.gh.git"
+  },
   "scripts": {
     "lint": "eslint src",
     "format": "eslint src --fix",
