@@ -19,8 +19,8 @@
     "start": "ts-node src/direct.ts"
   },
   "dependencies": {
-    "@actions/core": "2.0.0",
-    "@types/node": "25.0.0",
+    "@actions/core": "2.0.1",
+    "@types/node": "25.0.1",
     "analytica.click": "0.0.578",
     "cross-env": "10.1.0",
     "cross-fetch": "4.1.0",
@@ -37,6 +37,6 @@
     "pnpm": ">=8.6"
   },
   "devDependencies": {
-    "eslint": "9.39.1"
+    "eslint": "9.39.2"
   }
 }
