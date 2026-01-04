@@ -27,8 +27,8 @@ importers:
         specifier: 0.27.2
         version: 0.27.2
       eslint-config-e7npm:
-        specifier: 0.1.30
-        version: 0.1.30(jiti@2.6.1)
+        specifier: 0.1.31
+        version: 0.1.31(jiti@2.6.1)
       rimraf:
         specifier: 6.1.2
         version: 6.1.2
@@ -922,8 +922,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-e7npm@0.1.30:
-    resolution: {integrity: sha512-QK2EXssGVVxUwUj230pAqWy011zm5HAKvHrL9XSGd/NAOkcItouLV3Bch1WJ/ts2jqYrnUEZIqtBOSFEpdSlAw==}
+  eslint-config-e7npm@0.1.31:
+    resolution: {integrity: sha512-nVD3TtXiP6lgoOPkA2eEMsGWLygIwg8msfzAsE7EmA7lf+cdVYrFHEfhFQdBbWmZMqoUd8tomLoRAy5P+LXgCA==}
 
   eslint-config-prettier@10.1.5:
     resolution: {integrity: sha512-zc1UmCpNltmVY34vuLRV61r1K27sWuX39E+uyUnY8xS2Bex88VV9cugG+UZbRSRGtGyFboj+D8JODyme1plMpw==}
@@ -2527,7 +2527,7 @@ snapshots:
       clsx: 2.1.1
       cross-env: 10.1.0
       eslint: 9.39.2(jiti@2.6.1)
-      eslint-config-e7npm: 0.1.30(jiti@2.6.1)
+      eslint-config-e7npm: 0.1.31(jiti@2.6.1)
       lucide-react: 0.562.0(react@19.2.1)
       react: 19.2.1
       react-dom: 19.2.1(react@19.2.1)
@@ -2973,7 +2973,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-e7npm@0.1.30(jiti@2.6.1):
+  eslint-config-e7npm@0.1.31(jiti@2.6.1):
     dependencies:
       '@next/eslint-plugin-next': 15.3.4
       '@typescript-eslint/eslint-plugin': 8.35.1(@typescript-eslint/parser@8.35.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
