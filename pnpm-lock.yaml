@@ -15,8 +15,8 @@ importers:
         specifier: 25.0.9
         version: 25.0.9
       analytica.click:
-        specifier: 0.0.596
-        version: 0.0.596(@types/node@25.0.9)(jiti@2.6.1)(postcss@8.5.6)
+        specifier: 0.0.597
+        version: 0.0.597(@types/node@25.0.9)(jiti@2.6.1)(postcss@8.5.6)
       cross-env:
         specifier: 10.1.0
         version: 10.1.0
@@ -640,14 +640,14 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  ag-common@0.0.859:
-    resolution: {integrity: sha512-CeK0zHIXhfS3ckYxl7pKXCjoaXV4rP+BzgzRkFojLwVLoW/gnYVhCc8gS3JpKgS/xpLmYRiGhzJjCZxynagnLQ==}
+  ag-common@0.0.860:
+    resolution: {integrity: sha512-AIvf8m2bSup/YkgmqGfUiQ8Xd19Vh6ynTG6Bgx0yKsYLvoCzYbC9zCeiypkd3J6SdzuF6pX3QOW4cxF/S02oxA==}
 
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
-  analytica.click@0.0.596:
-    resolution: {integrity: sha512-TuFWOvrIrN5UMBpjhVAR3GBFWI38K60Np22qFOHmGwVclADQYCDCsOV8xYVEWBuI06a0gmoOGLw1oEP3IOHNsQ==}
+  analytica.click@0.0.597:
+    resolution: {integrity: sha512-QgXSYz6sPyrE1XEkg9E9DWBkFcSowObeiNzRGjDXIidU+vynzPU7HvIKhtuNqHMXuuQKDn3vwg1efXS7LeUGYQ==}
 
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
@@ -2515,7 +2515,7 @@ snapshots:
 
   acorn@8.15.0: {}
 
-  ag-common@0.0.859(jiti@2.6.1)(postcss@8.5.6):
+  ag-common@0.0.860(jiti@2.6.1)(postcss@8.5.6):
     dependencies:
       '@tailwindcss/postcss': 4.1.18
       autoprefixer: 10.4.23(postcss@8.5.6)
@@ -2547,10 +2547,10 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  analytica.click@0.0.596(@types/node@25.0.9)(jiti@2.6.1)(postcss@8.5.6):
+  analytica.click@0.0.597(@types/node@25.0.9)(jiti@2.6.1)(postcss@8.5.6):
     dependencies:
       '@types/react': 19.1.8
-      ag-common: 0.0.859(jiti@2.6.1)(postcss@8.5.6)
+      ag-common: 0.0.860(jiti@2.6.1)(postcss@8.5.6)
       cross-env: 10.1.0
       cross-fetch: 4.1.0
       nodemon: 3.0.1
