@@ -15,8 +15,8 @@ importers:
         specifier: 25.0.10
         version: 25.0.10
       analytica.click:
-        specifier: 0.0.600
-        version: 0.0.600(@types/node@25.0.10)(jiti@2.6.1)(postcss@8.5.6)
+        specifier: 0.0.601
+        version: 0.0.601(@types/node@25.0.10)(jiti@2.6.1)(postcss@8.5.6)
       cross-env:
         specifier: 10.1.0
         version: 10.1.0
@@ -652,14 +652,14 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  ag-common@0.0.864:
-    resolution: {integrity: sha512-KOA8100dD5JX+b3ld5N+AmQoy3YuskVsNtR6Vif6rzHxksss4P5/uSdsDVs9MY5k/jrb2gw0sGKUXjheZf6dBQ==}
+  ag-common@0.0.865:
+    resolution: {integrity: sha512-ZYW7YEChXKPFxgsC9Bw9LA9wFN3V2TRdt/jxY7kxw6XiFSYvlo+YJ/s2ejH2L/3KGUO5pkOC4IVBXlqm5R3zqA==}
 
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
-  analytica.click@0.0.600:
-    resolution: {integrity: sha512-tr5XsfkiLry4SUjq3E9x8g7pP5w41ZGs/MlpX1vayvuYDbgY+QwiIZH6ZxQRVTJPT5rkdlU4nZenOou+S7jtUQ==}
+  analytica.click@0.0.601:
+    resolution: {integrity: sha512-29m/V8G3U2GZAmF9Y4uCRSBIFnZ41fTSd1o7s27CFJVPJP/BnP0PUxUqEAlfxhv2j33eL7WlBukVQ8VO4/f/3g==}
 
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
@@ -1506,8 +1506,8 @@ packages:
     resolution: {integrity: sha512-Qv32eSV1RSCfhY3fpPE2GNZ8jgM9X7rdAfemLWqTUxwiyIC4jJ6Sy0fZ8H+oLWevO6i4/bizg7c8d8i6bxrzbA==}
     engines: {node: 20 || >=22}
 
-  lucide-react@0.562.0:
-    resolution: {integrity: sha512-82hOAu7y0dbVuFfmO4bYF1XEwYk/mEbM5E+b1jgci/udUBEE/R7LF5Ip0CCEmXe8AybRM8L+04eP+LGZeDvkiw==}
+  lucide-react@0.563.0:
+    resolution: {integrity: sha512-8dXPB2GI4dI8jV4MgUDGBeLdGk8ekfqVZ0BdLcrRzocGgG75ltNEmWS+gE7uokKF/0oSUuczNDT+g9hFJ23FkA==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
@@ -2531,7 +2531,7 @@ snapshots:
 
   acorn@8.15.0: {}
 
-  ag-common@0.0.864(jiti@2.6.1)(postcss@8.5.6):
+  ag-common@0.0.865(jiti@2.6.1)(postcss@8.5.6):
     dependencies:
       '@tailwindcss/postcss': 4.1.18
       autoprefixer: 10.4.23(postcss@8.5.6)
@@ -2540,7 +2540,7 @@ snapshots:
       cross-env: 10.1.0
       eslint: 9.39.2(jiti@2.6.1)
       eslint-config-e7npm: 0.1.31(jiti@2.6.1)
-      lucide-react: 0.562.0(react@19.2.3)
+      lucide-react: 0.563.0(react@19.2.3)
       react: 19.2.3
       react-dom: 19.2.3(react@19.2.3)
       tailwind-merge: 3.4.0
@@ -2563,10 +2563,10 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  analytica.click@0.0.600(@types/node@25.0.10)(jiti@2.6.1)(postcss@8.5.6):
+  analytica.click@0.0.601(@types/node@25.0.10)(jiti@2.6.1)(postcss@8.5.6):
     dependencies:
       '@types/react': 19.1.8
-      ag-common: 0.0.864(jiti@2.6.1)(postcss@8.5.6)
+      ag-common: 0.0.865(jiti@2.6.1)(postcss@8.5.6)
       cross-env: 10.1.0
       cross-fetch: 4.1.0
       nodemon: 3.0.1
@@ -3609,7 +3609,7 @@ snapshots:
 
   lru-cache@11.0.0: {}
 
-  lucide-react@0.562.0(react@19.2.3):
+  lucide-react@0.563.0(react@19.2.3):
     dependencies:
       react: 19.2.3
 
