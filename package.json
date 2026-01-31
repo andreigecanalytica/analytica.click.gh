@@ -19,8 +19,8 @@
     "start": "ts-node src/direct.ts"
   },
   "dependencies": {
-    "@actions/core": "2.0.2",
-    "@types/node": "25.0.10",
+    "@actions/core": "2.0.3",
+    "@types/node": "25.1.0",
     "analytica.click": "0.0.603",
     "cross-env": "10.1.0",
     "cross-fetch": "4.1.0",
