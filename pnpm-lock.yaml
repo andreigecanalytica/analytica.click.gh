@@ -15,8 +15,8 @@ importers:
         specifier: 25.1.0
         version: 25.1.0
       analytica.click:
-        specifier: 0.0.603
-        version: 0.0.603(@types/node@25.1.0)(jiti@2.6.1)(postcss@8.5.6)
+        specifier: 0.0.604
+        version: 0.0.604(@types/node@25.1.0)(jiti@2.6.1)(postcss@8.5.6)
       cross-env:
         specifier: 10.1.0
         version: 10.1.0
@@ -654,8 +654,8 @@ packages:
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
 
-  analytica.click@0.0.603:
-    resolution: {integrity: sha512-2olJyYcS8fPUQtNHjuRw2mRuLXibcwfmsP4nPZHIAiJE9zHcZorWgw9lBX8RC6U35IcP09iwp8tlYF/yG9xi2Q==}
+  analytica.click@0.0.604:
+    resolution: {integrity: sha512-PfB2IERLql23FQ24HpkK0tQpLlNITLO7yjwluRXqgXX/kn5SdvucFJu+3fOW+MwpL16uudLSw2GYUBtYoMFisg==}
 
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
@@ -2557,7 +2557,7 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  analytica.click@0.0.603(@types/node@25.1.0)(jiti@2.6.1)(postcss@8.5.6):
+  analytica.click@0.0.604(@types/node@25.1.0)(jiti@2.6.1)(postcss@8.5.6):
     dependencies:
       '@types/react': 19.1.8
       ag-common: 0.0.866(jiti@2.6.1)(postcss@8.5.6)
