@@ -12,11 +12,11 @@ importers:
         specifier: 2.0.3
         version: 2.0.3
       '@types/node':
-        specifier: 25.2.1
-        version: 25.2.1
+        specifier: 25.2.3
+        version: 25.2.3
       analytica.click:
         specifier: 0.0.610
-        version: 0.0.610(@types/node@25.2.1)(jiti@2.6.1)(postcss@8.5.6)
+        version: 0.0.610(@types/node@25.2.3)(jiti@2.6.1)(postcss@8.5.6)
       cross-env:
         specifier: 10.1.0
         version: 10.1.0
@@ -34,7 +34,7 @@ importers:
         version: 6.1.2
       ts-node:
         specifier: 10.9.2
-        version: 10.9.2(@types/node@25.2.1)(typescript@5.9.3)
+        version: 10.9.2(@types/node@25.2.3)(typescript@5.9.3)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -463,8 +463,8 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@25.2.1':
-    resolution: {integrity: sha512-CPrnr8voK8vC6eEtyRzvMpgp3VyVRhgclonE7qYi6P9sXwYb59ucfrnmFBTaP0yUi8Gk4yZg/LlTJULGxvTNsg==}
+  '@types/node@25.2.3':
+    resolution: {integrity: sha512-m0jEgYlYz+mDJZ2+F4v8D1AyQb+QzsNqRuI7xg1VQX/KlKS0qT9r1Mo16yo5F/MtifXFgaofIFsdFMox2SxIbQ==}
 
   '@types/react@19.1.8':
     resolution: {integrity: sha512-AwAfQ2Wa5bCx9WP8nZL2uMZWod7J7/JSplxbTmBQ5ms6QpqNYm672H0Vu9ZVKVngQ+ii4R/byguVEUZQyeg44g==}
@@ -2356,7 +2356,7 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/node@25.2.1':
+  '@types/node@25.2.3':
     dependencies:
       undici-types: 7.16.0
 
@@ -2557,7 +2557,7 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  analytica.click@0.0.610(@types/node@25.2.1)(jiti@2.6.1)(postcss@8.5.6):
+  analytica.click@0.0.610(@types/node@25.2.3)(jiti@2.6.1)(postcss@8.5.6):
     dependencies:
       '@types/react': 19.1.8
       ag-common: 0.0.874(jiti@2.6.1)(postcss@8.5.6)
@@ -2565,7 +2565,7 @@ snapshots:
       cross-fetch: 4.1.0
       nodemon: 3.0.1
       react: 19.2.4
-      ts-node: 10.9.2(@types/node@25.2.1)(typescript@5.9.3)
+      ts-node: 10.9.2(@types/node@25.2.3)(typescript@5.9.3)
       typescript: 5.9.3
     transitivePeerDependencies:
       - '@swc/core'
@@ -4040,14 +4040,14 @@ snapshots:
     dependencies:
       typescript: 5.9.3
 
-  ts-node@10.9.2(@types/node@25.2.1)(typescript@5.9.3):
+  ts-node@10.9.2(@types/node@25.2.3)(typescript@5.9.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 25.2.1
+      '@types/node': 25.2.3
       acorn: 8.15.0
       acorn-walk: 8.2.0
       arg: 4.1.3
