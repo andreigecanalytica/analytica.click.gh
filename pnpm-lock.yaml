@@ -27,8 +27,8 @@ importers:
         specifier: 0.28.0
         version: 0.28.0
       eslint-config-e7npm:
-        specifier: 0.1.43
-        version: 0.1.43
+        specifier: 0.1.44
+        version: 0.1.44
       rimraf:
         specifier: 6.1.3
         version: 6.1.3
@@ -2026,8 +2026,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-e7npm@0.1.43:
-    resolution: {integrity: sha512-4UX42nEjSdbXQ0tOTZbrvasg7zFZ4PK+UaZftCOrRBomejSBYJQVETKvaNcPzqhcneY2fLkMemakIbx41MtNWQ==}
+  eslint-config-e7npm@0.1.44:
+    resolution: {integrity: sha512-Akaeb7cwHXluEP0fvDLBlxHvpTIv5AAjuotDfEBpa9z62/3dH5x9IFlzqp+Mw0Xp2A3lOWdoB85+5yc8eYCzaQ==}
 
   eslint-config-prettier@10.1.8:
     resolution: {integrity: sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w==}
@@ -5457,7 +5457,7 @@ snapshots:
 
   '@types/retry@0.12.0': {}
 
-  '@typescript-eslint/eslint-plugin@8.59.0(@typescript-eslint/parser@8.59.0(eslint@10.3.0)(typescript@6.0.3))(eslint@10.3.0)(typescript@6.0.3)':
+  '@typescript-eslint/eslint-plugin@8.59.0(@typescript-eslint/parser@8.59.0(eslint@9.39.4)(typescript@5.9.3))(eslint@10.3.0)(typescript@6.0.3)':
     dependencies:
       '@eslint-community/regexpp': 4.12.2
       '@typescript-eslint/parser': 8.59.0(eslint@10.3.0)(typescript@6.0.3)
@@ -6133,17 +6133,17 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-e7npm@0.1.43:
+  eslint-config-e7npm@0.1.44:
     dependencies:
       '@next/eslint-plugin-next': 16.2.4
-      '@typescript-eslint/eslint-plugin': 8.59.0(@typescript-eslint/parser@8.59.0(eslint@10.3.0)(typescript@6.0.3))(eslint@10.3.0)(typescript@6.0.3)
+      '@typescript-eslint/eslint-plugin': 8.59.0(@typescript-eslint/parser@8.59.0(eslint@9.39.4)(typescript@5.9.3))(eslint@10.3.0)(typescript@6.0.3)
       '@typescript-eslint/parser': 8.59.0(eslint@10.3.0)(typescript@6.0.3)
       eslint: 10.3.0
       eslint-config-prettier: 10.1.8(eslint@10.3.0)
       eslint-import-resolver-typescript: 4.4.4(eslint-plugin-import@2.32.0)(eslint@10.3.0)
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.59.0(eslint@9.39.4)(typescript@5.9.3))(eslint@9.39.4)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@10.3.0)
-      eslint-plugin-prettier: 5.5.5(eslint-config-prettier@10.1.8(eslint@9.39.4))(eslint@10.3.0)(prettier@3.8.3)
+      eslint-plugin-prettier: 5.5.5(eslint-config-prettier@10.1.8(eslint@10.3.0))(eslint@10.3.0)(prettier@3.8.3)
       eslint-plugin-react: 7.37.5(eslint@10.3.0)
       eslint-plugin-react-hooks: 7.1.1(eslint@10.3.0)
       eslint-plugin-simple-import-sort: 13.0.0(eslint@10.3.0)
@@ -6250,7 +6250,7 @@ snapshots:
       safe-regex-test: 1.1.0
       string.prototype.includes: 2.0.1
 
-  eslint-plugin-prettier@5.5.5(eslint-config-prettier@10.1.8(eslint@9.39.4))(eslint@10.3.0)(prettier@3.8.3):
+  eslint-plugin-prettier@5.5.5(eslint-config-prettier@10.1.8(eslint@10.3.0))(eslint@10.3.0)(prettier@3.8.3):
     dependencies:
       eslint: 10.3.0
       prettier: 3.8.3
