@@ -1,9 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "labels": [
-    "analytica.click.gh"
-  ],
-  "extends": [
-    "github>andreigec/renovate"
-  ]
+  "labels": ["analytica.click.gh"],
+  "extends": ["github>andreigec/renovate"]
 }

@@ -1,3 +1,9 @@
+allowBuilds:
+  ag-common: true
+  esbuild: true
+  eslint-config-e7npm: true
+  protobufjs: true
+  unrs-resolver: true
 onlyBuiltDependencies:
   - ag-common
   - esbuild

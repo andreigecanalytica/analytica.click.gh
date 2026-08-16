@@ -1,53 +1,22 @@
 {
-
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	
-	"settings": {
- 
-		"eslint.nodePath": ".pnpm/sdks",
-		"prettier.prettierPath": ".pnpm/sdks/prettier/index.js",
-		"typescript.tsdk": "node_modules\\typescript\\lib",
-		"typescript.enablePromptUseWorkspaceTsdk": true,
-		"search.exclude": {
-		  "**/.pnpm": true,
-		  "**/.pnp.*": true
-		  },
-		"editor.codeActionsOnSave": {
-			"source.fixAll.eslint": "explicit"
-		},
-		"files.exclude": {
-		  "packages/ui/.cache": true,
-		  "packages/ui/.next": true,
-		  "packages/infra/build": true,
-		  "packages/infra/cdk.out": true,
-		  "**/.git": true,
-		  "**/.DS_Store": true,
-		  "**/node_modules": true,
-		  "**/dist": true,
-		  "node_modules": true
-		}
-	  },
-	  
-	"launch": {
-		"version": "0.2.0",
-		"configurations": [
-			{
-				"type": "node-terminal",
-				"name": "Debug Current Test File (npm run test)",
-				"request": "launch",
-				"command": "npm run start -- src/direct.ts",
-				"cwd": "${fileDirname}"
-			  }
-		]
-	},"extensions": {
-		"recommendations": [
-		  "arcanis.vscode-zipfs",
-		  "dbaeumer.vscode-eslint"
-		]
-	  }
-	  
+  "folders": [
+    {
+      "path": ".",
+    },
+  ],
+  "settings": {
+    "search.exclude": {
+      "**/.pnpm": true,
+      "**/.pnp.*": true,
+    },
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.oxc": "explicit",
+    },
+    "oxc.fmt.configPath": "./node_modules/eslint-config-e7npm/oxfmt.json",
+  },
+  "extensions": {
+    "recommendations": ["oxc.oxc-vscode"],
+  },
 }

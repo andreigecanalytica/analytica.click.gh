@@ -15,21 +15,21 @@ jobs:
     runs-on: ubuntu-latest
     name: testFail
     steps:
-    - name: Dump GitHub context
-      env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
-        JOB_CONTEXT: ${{ toJson(job) }}
-        STEPS_CONTEXT: ${{ toJson(steps) }}
-      run: |
-        echo "$GITHUB_CONTEXT";
-        echo "$JOB_CONTEXT";
-        echo "$STEPS_CONTEXT"
-    - name: Try to fail
-      id: failure
-      run: exit 1
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+          JOB_CONTEXT: ${{ toJson(job) }}
+          STEPS_CONTEXT: ${{ toJson(steps) }}
+        run: |
+          echo "$GITHUB_CONTEXT";
+          echo "$JOB_CONTEXT";
+          echo "$STEPS_CONTEXT"
+      - name: Try to fail
+        id: failure
+        run: exit 1
 
-    - name: notify analytica of build
-      if: always()
-      uses: andreigecanalytica/analytica.click.gh@v2
-      with:
-        ANALYTICA_TOKEN: '${{ secrets.ANALYTICATOKEN }}'
+      - name: notify analytica of build
+        if: always()
+        uses: andreigecanalytica/analytica.click.gh@v2
+        with:
+          ANALYTICA_TOKEN: '${{ secrets.ANALYTICATOKEN }}'

@@ -3,13 +3,7 @@ import { event } from 'analytica.click/dist/helpers/server';
 
 import type { IGithubContext, IJobContext } from './types';
 
-const getEventName = ({
-  github,
-  job,
-}: {
-  github: IGithubContext;
-  job: IJobContext;
-}) => {
+const getEventName = ({ github, job }: { github: IGithubContext; job: IJobContext }) => {
   if (github.event.deployment_status && github.actor === 'vercel[bot]') {
     return `${github.repository}/VERCEL/${github.event.deployment_status.environment}/deploy/${github.event.deployment_status.state}`;
   }

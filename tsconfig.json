@@ -14,12 +14,6 @@
     "strictNullChecks": true,
     "noEmit": true
   },
-  "include": [
-    "src/**/*.ts",
-    "tsconfig.json"
-  ],
-  "exclude": [
-    "node_modules",
-    ".eslintrc.js"
-  ]
+  "include": ["src/**/*.ts", "tsconfig.json"],
+  "exclude": ["node_modules", ".eslintrc.js"]
 }

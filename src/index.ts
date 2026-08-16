@@ -1,6 +1,5 @@
 //required or github actions fetch fails
 import 'cross-fetch/polyfill';
-
 import * as core from '@actions/core';
 
 import { runParams } from './main';
