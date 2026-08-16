@@ -14,16 +14,16 @@
   "scripts": {
     "format": "e7-oxfmt",
     "lint": "e7-oxlint",
-    "build-direct": "rimraf .build && rimraf dist && cross-env NODE_ENV=prod ts-node esbuild",
+    "build-direct": "rimraf .build && rimraf dist && cross-env NODE_ENV=prod tsx esbuild.ts",
     "build": "pnpm run lint && pnpm build-direct",
-    "start": "ts-node src/direct.ts"
+    "start": "tsx src/direct.ts"
   },
   "dependencies": {
     "@actions/core": "3.0.1",
     "analytica.click": "0.0.648",
     "cross-env": "10.1.0",
     "cross-fetch": "4.1.0",
-    "ts-node": "10.9.2",
+    "tsx": "4.23.12",
     "typescript": "7.0.2"
   },
   "devDependencies": {

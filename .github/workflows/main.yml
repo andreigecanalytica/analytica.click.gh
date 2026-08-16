@@ -12,6 +12,7 @@ on:
       - '.github/workflows/main.yml'
       - 'esbuild.ts'
       - 'package.json'
+      - 'pnpm-lock.yaml'
 
 permissions:
   contents: write
@@ -55,19 +56,21 @@ jobs:
       - name: Run npm build
         run: pnpm run build
 
-      - name: Update git
+      - name: Create release commit
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "andreigec+analytica@hotmail.com"
-          git add --force dist || true;
-          git commit -m "updated dist (CI)" || true;
-          git push || true;
+          git add --force dist
+          git commit -m "Build v2"
+          git tag --force v2
 
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >-
           gh release delete v2 --cleanup-tag -y || true;
+          git push --force origin refs/tags/v2;
           gh release create v2
+          --verify-tag
           --generate-notes
           --title "Version ${{ github.ref_name }}"
