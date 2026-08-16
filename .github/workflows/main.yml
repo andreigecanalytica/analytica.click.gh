@@ -62,13 +62,13 @@ jobs:
           git config user.email "andreigec+analytica@hotmail.com"
           git add --force dist
           git commit -m "Build v2"
-          git tag --force v2
 
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >-
           gh release delete v2 --cleanup-tag -y || true;
+          git tag --force v2;
           git push --force origin refs/tags/v2;
           gh release create v2
           --verify-tag
