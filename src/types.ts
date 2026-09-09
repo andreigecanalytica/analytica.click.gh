@@ -2,6 +2,15 @@
 export interface IJobContext {
   status: 'failure' | 'success';
 }
+export interface IAnnotation {
+  path?: string;
+  start_line?: number;
+  end_line?: number;
+  annotation_level?: string;
+  title?: string;
+  message?: string;
+  raw_details?: string;
+}
 export interface IGithubContext {
   token: string;
   job: string;

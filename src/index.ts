@@ -7,6 +7,7 @@ import type { IGithubContext, IJobContext } from './types';
 
 async function run(): Promise<void> {
   const ANALYTICA_TOKEN: string = core.getInput('ANALYTICA_TOKEN');
+  const GITHUB_TOKEN: string = core.getInput('GITHUB_TOKEN');
   const gcString: string = core.getInput('GITHUB_CONTEXT');
   const github = JSON.parse(gcString) as IGithubContext;
 
@@ -23,7 +24,7 @@ async function run(): Promise<void> {
     return;
   }
 
-  return runParams({ ANALYTICA_TOKEN, github, job });
+  return runParams({ ANALYTICA_TOKEN, GITHUB_TOKEN, github, job });
 }
 
 void run();

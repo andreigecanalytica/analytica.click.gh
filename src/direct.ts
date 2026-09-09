@@ -3,6 +3,7 @@ import type { IGithubContext, IJobContext } from './types';
 
 void runParams({
   ANALYTICA_TOKEN: 'xxx',
+  GITHUB_TOKEN: 'xxx',
   github: { repository: 'xxx' } as IGithubContext,
   job: { status: 'success' } as IJobContext,
 });

@@ -1,6 +1,7 @@
 import * as core from '@actions/core';
 import { event } from 'analytica.click/dist/helpers/server';
 
+import { getFailureDescription } from './annotations';
 import type { IGithubContext, IJobContext } from './types';
 
 const getEventName = ({ github, job }: { github: IGithubContext; job: IJobContext }) => {
@@ -12,10 +13,12 @@ const getEventName = ({ github, job }: { github: IGithubContext; job: IJobContex
 };
 export const runParams = async ({
   ANALYTICA_TOKEN,
+  GITHUB_TOKEN,
   github,
   job,
 }: {
   ANALYTICA_TOKEN: string;
+  GITHUB_TOKEN?: string;
   github: IGithubContext;
   job: IJobContext;
 }) => {
@@ -25,9 +28,14 @@ export const runParams = async ({
       core.error('no event name calculated');
       return;
     }
+    const description =
+      job.status === 'failure'
+        ? await getFailureDescription({ GITHUB_TOKEN, eventName, github })
+        : undefined;
     const e = await event({
       analyticaToken: ANALYTICA_TOKEN,
       eventName,
+      ...(description ? { description } : {}),
     });
     if (e.error) {
       core.error('Unexpected tracking error:' + e.error);
