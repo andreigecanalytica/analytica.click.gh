@@ -1,4 +1,5 @@
 allowBuilds:
+  '@google/genai': false
   ag-common: true
   esbuild: true
   eslint-config-e7npm: true
