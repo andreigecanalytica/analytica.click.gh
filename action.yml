@@ -15,7 +15,7 @@ inputs:
     default: '${{ toJson(job) }}'
   GITHUB_TOKEN:
     required: false
-    description: 'token used to read failure annotations from the GitHub API'
+    description: 'automatic github token used to read failure annotations. no secret needed, defaults to github.token'
     default: '${{ github.token }}'
 runs:
   using: 'node16'

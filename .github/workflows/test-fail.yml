@@ -37,4 +37,3 @@ jobs:
         uses: andreigecanalytica/analytica.click.gh@v2
         with:
           ANALYTICA_TOKEN: '${{ secrets.ANALYTICATOKEN }}'
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
