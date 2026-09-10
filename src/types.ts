@@ -63,11 +63,6 @@ export interface Event {
   check_run: any;
   deployment?: Deployment;
   deployment_status?: DeploymentStatus;
-  pull_request?: {
-    head?: {
-      sha?: string;
-    };
-  };
   repository: Repository;
   sender: Sender;
   workflow?: string;

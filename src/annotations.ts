@@ -6,7 +6,8 @@ export const MAX_DESCRIPTION_LENGTH = 1000;
 const MAX_ANNOTATIONS_PER_RUN = 100;
 const MAX_CHECK_RUNS = 100;
 const MAX_DESCRIPTIONS = 3;
-const MAX_CHECK_RUNS_TO_SCAN = 5;
+const MAX_ANNOTATION_ATTEMPTS = 4;
+const ANNOTATION_RETRY_DELAY_MS = 5000;
 
 interface ICheckRun {
   id: number;
@@ -25,11 +26,6 @@ interface IRunJob {
   conclusion?: string | null;
   steps?: IJobStep[];
 }
-
-/** pull_request events report the merge sha in github.sha, which has no
- * check-runs. Use the PR head sha so annotations resolve to the real run. */
-export const getCommitSha = (github: IGithubContext): string =>
-  github.event?.pull_request?.head?.sha || github.sha;
 
 const normalize = (value: string): string => value.replace(/\s+/g, ' ').trim();
 
@@ -59,7 +55,9 @@ export const formatAnnotation = (
             ? `-L${annotation.end_line}`
             : ''
         }`
-      : path && path !== '.github' ? path : undefined;
+      : path && path !== '.github'
+        ? path
+        : undefined;
   const label = title && title !== detail ? `${title}: ` : '';
   const runPrefix = checkRunName ? `${checkRunName}: ` : '';
   const levelPrefix = level && level !== 'failure' ? `${level}: ` : '';
@@ -159,25 +157,6 @@ export const getFailedStepDescription = (jobs: IRunJob[]): string | undefined =>
   return truncateDescription(`failed step: ${failedSteps.join(' | ')}`);
 };
 
-const listFailedCheckRuns = async ({
-  GITHUB_TOKEN,
-  github,
-}: {
-  GITHUB_TOKEN: string;
-  github: IGithubContext;
-}): Promise<ICheckRun[]> => {
-  const sha = getCommitSha(github);
-  if (!sha) {
-    return [];
-  }
-  const data = await githubRequest<{ check_runs?: ICheckRun[] }>({
-    GITHUB_TOKEN,
-    github,
-    path: `/commits/${sha}/check-runs?filter=latest&per_page=${MAX_CHECK_RUNS}`,
-  });
-  return (data?.check_runs ?? []).filter((run) => run.conclusion === 'failure');
-};
-
 const getCheckRun = async ({
   GITHUB_TOKEN,
   checkRunId,
@@ -192,6 +171,35 @@ const getCheckRun = async ({
     github,
     path: `/check-runs/${checkRunId}`,
   });
+
+const listAnnotationsWithRetry = async ({
+  GITHUB_TOKEN,
+  checkRunId,
+  github,
+}: {
+  GITHUB_TOKEN: string;
+  checkRunId: number;
+  github: IGithubContext;
+}): Promise<IAnnotation[]> => {
+  // Annotations land seconds after the failing step while this step runs, so
+  // retry briefly before accepting an empty result.
+  for (let attempt = 0; attempt < MAX_ANNOTATION_ATTEMPTS; attempt += 1) {
+    // eslint-disable-next-line no-await-in-loop
+    const annotations = await listAnnotations({
+      GITHUB_TOKEN,
+      checkRunId,
+      github,
+    });
+    if (annotations.length > 0) {
+      return annotations;
+    }
+    if (attempt < MAX_ANNOTATION_ATTEMPTS - 1) {
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((resolve) => setTimeout(resolve, ANNOTATION_RETRY_DELAY_MS));
+    }
+  }
+  return [];
+};
 
 const listAnnotations = async ({
   GITHUB_TOKEN,
@@ -251,51 +259,35 @@ export const getFailureDescription = async ({
     core.info('Skipping failure description: no GITHUB_TOKEN provided');
     return undefined;
   }
-  // JOB_CONTEXT already carries the current check-run id, so prefer it over
-  // the commit lookup (pull_request events report the merge sha, which has
-  // no check-runs of its own).
-  if (typeof job?.check_run_id === 'number') {
-    const checkRun = await getCheckRun({
-      GITHUB_TOKEN,
-      checkRunId: job.check_run_id,
-      github,
-    });
-    if (!checkRun || (checkRun.conclusion && checkRun.conclusion !== 'failure')) {
-      core.info(`No failure annotations found for ${eventName}`);
-      return undefined;
+  // JOB_CONTEXT carries the current check-run id, so resolve annotations
+  // directly without any commit-sha lookup.
+  if (typeof job?.check_run_id !== 'number') {
+    // Without a check-run id there is nothing reliable to query, so fall
+    // back to failed step names only.
+    core.info(`No check-run id for ${eventName}, falling back to failed steps`);
+    const stepOnlyJobs = await listRunJobs({ GITHUB_TOKEN, github });
+    const stepOnlyFallback = getFailedStepDescription(stepOnlyJobs);
+    if (stepOnlyFallback) {
+      return stepOnlyFallback;
     }
-    const annotations = await listAnnotations({
-      GITHUB_TOKEN,
-      checkRunId: checkRun.id,
-      github,
-    });
-    const descriptions = collectDescriptions([{ annotations, checkRun }]);
-    const jobs = await listRunJobs({ GITHUB_TOKEN, github });
-    const fallback = getFailedStepDescription(jobs);
-    const combined = [...descriptions, ...(fallback ? [fallback] : [])].slice(0, MAX_DESCRIPTIONS);
-    if (combined.length > 0) {
-      return truncateDescription(combined.join(' | '));
-    }
-    core.info(`No failure annotations or failed steps found for ${eventName}`);
+    core.info(`No failed steps found for ${eventName}`);
     return undefined;
   }
-  // Check-run names match the workflow job name (github.job), so prefer runs
-  // for this job but fall back to every failed run on the sha.
-  const checkRuns = await listFailedCheckRuns({ GITHUB_TOKEN, github });
-  const forThisJob = checkRuns.filter((run) => run.name === github.job);
-  const relevant = [...forThisJob, ...checkRuns.filter((run) => run.name !== github.job)];
-  const scanned = relevant.slice(0, MAX_CHECK_RUNS_TO_SCAN);
-  const annotationsByRun = await Promise.all(
-    scanned.map(async (checkRun) => ({
-      checkRun,
-      annotations: await listAnnotations({
-        GITHUB_TOKEN,
-        checkRunId: checkRun.id,
-        github,
-      }),
-    })),
-  );
-  const descriptions = collectDescriptions(annotationsByRun);
+  const checkRun = await getCheckRun({
+    GITHUB_TOKEN,
+    checkRunId: job.check_run_id,
+    github,
+  });
+  if (!checkRun || (checkRun.conclusion && checkRun.conclusion !== 'failure')) {
+    core.info(`No failure annotations found for ${eventName}`);
+    return undefined;
+  }
+  const annotations = await listAnnotationsWithRetry({
+    GITHUB_TOKEN,
+    checkRunId: checkRun.id,
+    github,
+  });
+  const descriptions = collectDescriptions([{ annotations, checkRun }]);
   const jobs = await listRunJobs({ GITHUB_TOKEN, github });
   const fallback = getFailedStepDescription(jobs);
   const combined = [...descriptions, ...(fallback ? [fallback] : [])].slice(0, MAX_DESCRIPTIONS);
