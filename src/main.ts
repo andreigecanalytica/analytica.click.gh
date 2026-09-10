@@ -30,7 +30,7 @@ export const runParams = async ({
     }
     const description =
       job.status === 'failure'
-        ? await getFailureDescription({ GITHUB_TOKEN, eventName, github })
+        ? await getFailureDescription({ GITHUB_TOKEN, eventName, github, job })
         : undefined;
     const e = await event({
       analyticaToken: ANALYTICA_TOKEN,
