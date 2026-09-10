@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export interface IJobContext {
-  status: 'failure' | 'success';
+  status: 'failure' | 'success' | 'cancelled';
   check_run_id?: number;
 }
 export interface IAnnotation {
@@ -60,15 +60,36 @@ export interface IGithubContext {
 
 export interface Event {
   action?: string;
-  check_run: any;
+  check_run?: any;
+  client_payload?: ClientPayload;
   deployment?: Deployment;
   deployment_status?: DeploymentStatus;
-  repository: Repository;
-  sender: Sender;
+  repository?: Repository;
+  sender?: Sender;
   workflow?: string;
-  workflow_run: any;
+  workflow_run?: any;
   inputs?: Inputs;
   ref?: string;
+}
+
+export interface ClientPayload {
+  environment?: string;
+  error?: string;
+  git?: {
+    ref?: string;
+    sha?: string;
+    shortSha?: string;
+  };
+  id?: string;
+  project?: {
+    id?: string;
+    name?: string;
+  };
+  state?: {
+    detail?: string;
+    type?: string;
+  };
+  url?: string;
 }
 
 export interface Deployment {
