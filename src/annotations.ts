@@ -53,13 +53,13 @@ export const formatAnnotation = (
   }
 
   const location =
-    path && annotation.start_line
+    path && path !== '.github' && annotation.start_line
       ? `${path}#L${annotation.start_line}${
           annotation.end_line && annotation.end_line !== annotation.start_line
             ? `-L${annotation.end_line}`
             : ''
         }`
-      : path || undefined;
+      : path && path !== '.github' ? path : undefined;
   const label = title && title !== detail ? `${title}: ` : '';
   const runPrefix = checkRunName ? `${checkRunName}: ` : '';
   const levelPrefix = level && level !== 'failure' ? `${level}: ` : '';
@@ -270,16 +270,13 @@ export const getFailureDescription = async ({
       github,
     });
     const descriptions = collectDescriptions([{ annotations, checkRun }]);
-    if (descriptions.length > 0) {
-      return truncateDescription(descriptions.join(' | '));
-    }
-    core.info(`No failure annotations found for ${eventName}, falling back to failed steps`);
     const jobs = await listRunJobs({ GITHUB_TOKEN, github });
     const fallback = getFailedStepDescription(jobs);
-    if (fallback) {
-      return fallback;
+    const combined = [...descriptions, ...(fallback ? [fallback] : [])].slice(0, MAX_DESCRIPTIONS);
+    if (combined.length > 0) {
+      return truncateDescription(combined.join(' | '));
     }
-    core.info(`No failed steps found for ${eventName}`);
+    core.info(`No failure annotations or failed steps found for ${eventName}`);
     return undefined;
   }
   // Check-run names match the workflow job name (github.job), so prefer runs
@@ -299,15 +296,12 @@ export const getFailureDescription = async ({
     })),
   );
   const descriptions = collectDescriptions(annotationsByRun);
-  if (descriptions.length > 0) {
-    return truncateDescription(descriptions.join(' | '));
-  }
-  core.info(`No failure annotations found for ${eventName}, falling back to failed steps`);
   const jobs = await listRunJobs({ GITHUB_TOKEN, github });
   const fallback = getFailedStepDescription(jobs);
-  if (fallback) {
-    return fallback;
+  const combined = [...descriptions, ...(fallback ? [fallback] : [])].slice(0, MAX_DESCRIPTIONS);
+  if (combined.length > 0) {
+    return truncateDescription(combined.join(' | '));
   }
-  core.info(`No failed steps found for ${eventName}`);
+  core.info(`No failure annotations or failed steps found for ${eventName}`);
   return undefined;
 };
