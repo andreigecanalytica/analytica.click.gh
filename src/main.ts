@@ -39,8 +39,10 @@ export const runParams = async ({
     });
     if (e.error) {
       core.error('Unexpected tracking error:' + e.error);
+    } else if (description) {
+      core.info(`Tracked event to analytica.click successfully:${eventName} description:${description}`);
     } else {
-      core.info('Tracked event to analytica.click successfully:' + eventName);
+      core.info(`Tracked event to analytica.click successfully:${eventName} (no description)`);
     }
   } catch {
     //never fail
