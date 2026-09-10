@@ -14,6 +14,18 @@ interface ICheckRun {
   conclusion?: string;
 }
 
+interface IJobStep {
+  name?: string;
+  conclusion?: string | null;
+}
+
+interface IRunJob {
+  id: number;
+  name?: string;
+  conclusion?: string | null;
+  steps?: IJobStep[];
+}
+
 /** pull_request events report the merge sha in github.sha, which has no
  * check-runs. Use the PR head sha so annotations resolve to the real run. */
 export const getCommitSha = (github: IGithubContext): string =>
@@ -96,6 +108,55 @@ const githubRequest = async <T>({
     core.warning(`GitHub annotations request failed: ${String(error)}`);
     return undefined;
   }
+};
+
+const listRunJobs = async ({
+  GITHUB_TOKEN,
+  github,
+}: {
+  GITHUB_TOKEN: string;
+  github: IGithubContext;
+}): Promise<IRunJob[]> => {
+  const runId = github.run_id;
+  if (!runId) {
+    return [];
+  }
+  const data = await githubRequest<{ jobs?: IRunJob[] }>({
+    GITHUB_TOKEN,
+    github,
+    path: `/actions/runs/${runId}/jobs?per_page=${MAX_CHECK_RUNS}`,
+  });
+  return Array.isArray(data?.jobs) ? (data?.jobs ?? []) : [];
+};
+
+export const getFailedStepDescription = (jobs: IRunJob[]): string | undefined => {
+  const failedSteps: string[] = [];
+  for (const job of jobs) {
+    for (const step of job.steps ?? []) {
+      if (step.conclusion !== 'failure') {
+        continue;
+      }
+      const stepName = typeof step.name === 'string' ? step.name.trim() : '';
+      const jobName = typeof job.name === 'string' ? job.name.trim() : '';
+      const label =
+        jobName && stepName && jobName !== stepName
+          ? `${jobName} / ${stepName}`
+          : stepName || jobName;
+      if (label && !failedSteps.includes(label)) {
+        failedSteps.push(label);
+      }
+      if (failedSteps.length >= MAX_DESCRIPTIONS) {
+        break;
+      }
+    }
+    if (failedSteps.length >= MAX_DESCRIPTIONS) {
+      break;
+    }
+  }
+  if (failedSteps.length === 0) {
+    return undefined;
+  }
+  return truncateDescription(`failed step: ${failedSteps.join(' | ')}`);
 };
 
 const listFailedCheckRuns = async ({
@@ -209,11 +270,17 @@ export const getFailureDescription = async ({
       github,
     });
     const descriptions = collectDescriptions([{ annotations, checkRun }]);
-    if (descriptions.length === 0) {
-      core.info(`No failure annotations found for ${eventName}`);
-      return undefined;
+    if (descriptions.length > 0) {
+      return truncateDescription(descriptions.join(' | '));
     }
-    return truncateDescription(descriptions.join(' | '));
+    core.info(`No failure annotations found for ${eventName}, falling back to failed steps`);
+    const jobs = await listRunJobs({ GITHUB_TOKEN, github });
+    const fallback = getFailedStepDescription(jobs);
+    if (fallback) {
+      return fallback;
+    }
+    core.info(`No failed steps found for ${eventName}`);
+    return undefined;
   }
   // Check-run names match the workflow job name (github.job), so prefer runs
   // for this job but fall back to every failed run on the sha.
@@ -232,9 +299,15 @@ export const getFailureDescription = async ({
     })),
   );
   const descriptions = collectDescriptions(annotationsByRun);
-  if (descriptions.length === 0) {
-    core.info(`No failure annotations found for ${eventName}`);
-    return undefined;
+  if (descriptions.length > 0) {
+    return truncateDescription(descriptions.join(' | '));
   }
-  return truncateDescription(descriptions.join(' | '));
+  core.info(`No failure annotations found for ${eventName}, falling back to failed steps`);
+  const jobs = await listRunJobs({ GITHUB_TOKEN, github });
+  const fallback = getFailedStepDescription(jobs);
+  if (fallback) {
+    return fallback;
+  }
+  core.info(`No failed steps found for ${eventName}`);
+  return undefined;
 };
