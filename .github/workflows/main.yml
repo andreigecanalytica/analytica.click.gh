@@ -63,6 +63,7 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "andreigec+analytica@hotmail.com"
           git add --force dist
+          git diff --cached --quiet && echo "dist unchanged, skipping release commit" && exit 0
           git commit -m "Build v2"
 
       - name: Release
