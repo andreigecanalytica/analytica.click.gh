@@ -4,6 +4,8 @@ allowBuilds:
   eslint-config-e7npm: true
   protobufjs: true
   unrs-resolver: true
+minimumReleaseAgeExclude:
+  - analytica.click
 onlyBuiltDependencies:
   - ag-common
   - esbuild
