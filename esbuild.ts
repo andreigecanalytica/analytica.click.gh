@@ -3,7 +3,7 @@ import { build } from 'esbuild';
 async function run() {
   await Promise.all([
     build({
-      entryPoints: ['src/index.ts'],
+      entryPoints: ['src/index.ts', 'src/pre.ts'],
       bundle: true,
 
       logLevel: 'debug',

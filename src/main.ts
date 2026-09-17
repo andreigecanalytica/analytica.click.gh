@@ -87,6 +87,83 @@ export const getEventName = ({ github, job }: { github: IGithubContext; job: IJo
 
   return `${github.repository}/GH/${github.job}/${github.event_name}/${job.status}`;
 };
+
+const getRepository = (github: IGithubContext): string =>
+  github.repository || process.env.GITHUB_REPOSITORY || '';
+
+const getJobName = (github: IGithubContext): string =>
+  github.job || process.env.GITHUB_JOB || 'unknown';
+
+const getGithubEventName = (github: IGithubContext): string =>
+  github.event_name || process.env.GITHUB_EVENT_NAME || 'unknown';
+
+const getRunId = (github: IGithubContext): string | undefined =>
+  github.run_id || process.env.GITHUB_RUN_ID;
+
+const getRunAttempt = (github: IGithubContext): string =>
+  github.run_attempt || process.env.GITHUB_RUN_ATTEMPT || '1';
+
+const getVercelDeploymentId = (github: IGithubContext): string | undefined => {
+  const deploymentId = github.event?.deployment?.id;
+  if (typeof deploymentId === 'number' && Number.isFinite(deploymentId)) {
+    return String(deploymentId);
+  }
+  const deploymentUrl = github.event?.deployment_status?.deployment_url;
+  if (typeof deploymentUrl === 'string' && deploymentUrl.length > 0) {
+    return deploymentUrl.split('/').pop();
+  }
+  return undefined;
+};
+
+/**
+ * Stable id shared by the start and finish notifications of one build so the
+ * collector can correlate them. GitHub and Vercel ids are namespaced to avoid
+ * collisions. `run_attempt` keeps re-runs of the same GitHub run distinct.
+ */
+export const getBuildId = ({ github }: { github: IGithubContext }): string | undefined => {
+  if (isVercelEvent(github)) {
+    const deploymentId = getVercelDeploymentId(github);
+    if (deploymentId) {
+      return `vercel:${deploymentId}`;
+    }
+  }
+  const runId = getRunId(github);
+  return runId ? `github:${runId}:${getRunAttempt(github)}` : undefined;
+};
+
+export const getStartEventName = (github: IGithubContext): string =>
+  `${getRepository(github)}/GH/${getJobName(github)}/${getGithubEventName(github)}/in_progress`;
+
+/** Emitted by the action's `pre` hook, before the job's first step runs. */
+export const runStart = async ({
+  ANALYTICA_TOKEN,
+  github,
+}: {
+  ANALYTICA_TOKEN: string;
+  github: IGithubContext;
+}) => {
+  try {
+    if (isVercelEvent(github)) {
+      // Vercel already reports queued/in_progress deployment_status states, so
+      // emitting a synthetic start here would duplicate them.
+      return;
+    }
+    const buildId = getBuildId({ github });
+    if (!buildId) {
+      core.warning('no build id calculated for start event');
+      return;
+    }
+    const eventName = getStartEventName(github);
+    const e = await event({ analyticaToken: ANALYTICA_TOKEN, buildId, eventName });
+    if (e.error) {
+      core.error('Unexpected tracking error:' + e.error);
+    } else {
+      core.info(`Tracked build start to analytica.click successfully:${eventName}`);
+    }
+  } catch {
+    //never fail
+  }
+};
 export const runParams = async ({
   ANALYTICA_TOKEN,
   GITHUB_TOKEN,
@@ -130,9 +207,11 @@ export const runParams = async ({
       : job.status === 'failure'
         ? await getFailureDescription({ GITHUB_TOKEN, eventName, github, job })
         : undefined;
+    const buildId = getBuildId({ github });
     const e = await event({
       analyticaToken: ANALYTICA_TOKEN,
       eventName,
+      ...(buildId ? { buildId } : {}),
       ...(description ? { description } : {}),
     });
     if (e.error) {
