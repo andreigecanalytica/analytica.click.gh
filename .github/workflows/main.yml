@@ -18,6 +18,7 @@ on:
 
 permissions:
   contents: write
+  checks: read
   id-token: write
 
 jobs:
@@ -77,3 +78,9 @@ jobs:
           --verify-tag
           --generate-notes
           --title "Version ${{ github.ref_name }}"
+
+      - name: notify analytica of build
+        if: always()
+        uses: andreigecanalytica/analytica.click.gh@v2
+        with:
+          ANALYTICA_TOKEN: '${{ secrets.ANALYTICATOKEN }}'
