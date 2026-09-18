@@ -85,14 +85,25 @@ export const getEventName = ({ github, job }: { github: IGithubContext; job: IJo
     return `${github.repository}/VERCEL/${environment}/deploy/${state}`;
   }
 
-  return `${github.repository}/GH/${github.job}/${github.event_name}/${job.status}`;
+  return `${github.repository}/GH/${getWorkflowName(github)}/${github.event_name}/${job.status}`;
 };
 
 const getRepository = (github: IGithubContext): string =>
   github.repository || process.env.GITHUB_REPOSITORY || '';
 
-const getJobName = (github: IGithubContext): string =>
-  github.job || process.env.GITHUB_JOB || 'unknown';
+const WORKFLOW_FILE_EXTENSION = /\.ya?ml$/i;
+
+/**
+ * Workflow name used to group builds. GitHub reports the workflow's `name:` when
+ * set and otherwise the workflow file path (`.github/workflows/PR.yml`); the
+ * path is reduced to its basename so rows read `PR` rather than the full path.
+ */
+const getWorkflowName = (github: IGithubContext): string => {
+  const workflow = github.workflow || process.env.GITHUB_WORKFLOW || 'unknown';
+  const segments = workflow.split('/');
+  const basename = segments[segments.length - 1] ?? workflow;
+  return basename.replace(WORKFLOW_FILE_EXTENSION, '') || 'unknown';
+};
 
 const getGithubEventName = (github: IGithubContext): string =>
   github.event_name || process.env.GITHUB_EVENT_NAME || 'unknown';
@@ -132,7 +143,7 @@ export const getBuildId = ({ github }: { github: IGithubContext }): string | und
 };
 
 export const getStartEventName = (github: IGithubContext): string =>
-  `${getRepository(github)}/GH/${getJobName(github)}/${getGithubEventName(github)}/in_progress`;
+  `${getRepository(github)}/GH/${getWorkflowName(github)}/${getGithubEventName(github)}/in_progress`;
 
 /** Emitted by the action's `pre` hook, before the job's first step runs. */
 export const runStart = async ({
