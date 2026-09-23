@@ -7,7 +7,7 @@
     "allowJs": true,
     "isolatedModules": true,
     "target": "es6",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "skipLibCheck": true,
     "preserveConstEnums": true,
     "esModuleInterop": true,

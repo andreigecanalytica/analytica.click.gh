@@ -60,7 +60,7 @@ export const getVercelFailureDescription = (github: IGithubContext): string | un
   const state = getVercelState(github);
   const environment = getVercelEnvironment(github);
   const description =
-    github.event?.deployment_status?.description?.trim() ||
+    github.event?.deployment_status?.description.trim() ||
     github.event?.client_payload?.error?.trim() ||
     github.event?.client_payload?.state?.detail?.trim() ||
     '';

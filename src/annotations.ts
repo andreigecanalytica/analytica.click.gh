@@ -124,7 +124,7 @@ const listRunJobs = async ({
     github,
     path: `/actions/runs/${runId}/jobs?per_page=${MAX_CHECK_RUNS}`,
   });
-  return Array.isArray(data?.jobs) ? (data?.jobs ?? []) : [];
+  return Array.isArray(data?.jobs) ? data.jobs : [];
 };
 
 export const getFailedStepDescription = (jobs: IRunJob[]): string | undefined => {

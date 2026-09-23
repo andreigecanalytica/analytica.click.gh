@@ -36,7 +36,7 @@ export interface IGithubContext {
   head_ref: string;
   base_ref: string;
   event_name: string;
-  event: Event;
+  event?: Event;
   server_url: string;
   api_url: string;
   graphql_url: string;
