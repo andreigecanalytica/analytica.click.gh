@@ -12,8 +12,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1
       analytica.click:
-        specifier: 0.15.2
-        version: 0.15.2(@azure/core-client@1.10.1)(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: 0.15.22
+        version: 0.15.22(@azure/core-client@1.10.1)(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       cross-env:
         specifier: 10.1.0
         version: 10.1.0
@@ -2048,8 +2048,8 @@ packages:
   ajv@6.14.0:
     resolution: {integrity: sha512-IWrosm/yrn43eiKqkfkHis7QioDleaXQHdDVPKg0FSwwd/DuvyX79TZnFOnYpB7dcsFAMmtFztZuXPDvSePkFw==}
 
-  analytica.click@0.15.2:
-    resolution: {integrity: sha512-O65AMfqhMY6IaP4E6yMgnxwy8IqvRNlanHCuA4CKfp8nWPivnCqb4+tBJFLJyt3nnEGt3U8NAQ8XmdRU1VYzog==}
+  analytica.click@0.15.22:
+    resolution: {integrity: sha512-hmms4nz9o+D6Mtb9z19un7AEUgghzXNSnTwxntou/NSxdhJvRbtd1LvkvV4F5UTYkGcEg01jxS13BhDwlQmkGQ==}
     peerDependencies:
       '@vercel/functions': '>=2.0.0'
       next: '>=13.0.0'
@@ -3545,8 +3545,8 @@ packages:
     resolution: {integrity: sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==}
     engines: {node: '>= 8'}
 
-  web-vitals@6.2.2:
-    resolution: {integrity: sha512-oto5x6dLEgrRqfcWed+pZEUb2q6ikbFmqF54CRDhI/QGbn+qxC49b4C4OkbH+kb9C3a8shpFD3SgR9kRcs80ZQ==}
+  web-vitals@6.2.3:
+    resolution: {integrity: sha512-Dmy+vdO1UPMqXiAtZSNayhl4f794Bxfd94W4HIj2HlYtczEQfEOon969memlcpcHrTuOKLa5baFjX7WbgmOq+A==}
 
   webidl-conversions@3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
@@ -5404,10 +5404,10 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  analytica.click@0.15.2(@azure/core-client@1.10.1)(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+  analytica.click@0.15.22(@azure/core-client@1.10.1)(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
     dependencies:
       ag-common: 0.0.915(@azure/core-client@1.10.1)(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
-      web-vitals: 6.2.2
+      web-vitals: 6.2.3
     optionalDependencies:
       react: 19.2.8
     transitivePeerDependencies:
@@ -7256,7 +7256,7 @@ snapshots:
 
   web-streams-polyfill@3.3.3: {}
 
-  web-vitals@6.2.2: {}
+  web-vitals@6.2.3: {}
 
   webidl-conversions@3.0.1: {}
 
