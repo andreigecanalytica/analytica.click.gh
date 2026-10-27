@@ -12,8 +12,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1
       analytica.click:
-        specifier: 0.15.22
-        version: 0.15.22(@azure/core-client@1.10.1)(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: 0.15.24
+        version: 0.15.24(@azure/core-client@1.10.1)(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       cross-env:
         specifier: 10.1.0
         version: 10.1.0
@@ -2048,8 +2048,8 @@ packages:
   ajv@6.14.0:
     resolution: {integrity: sha512-IWrosm/yrn43eiKqkfkHis7QioDleaXQHdDVPKg0FSwwd/DuvyX79TZnFOnYpB7dcsFAMmtFztZuXPDvSePkFw==}
 
-  analytica.click@0.15.22:
-    resolution: {integrity: sha512-hmms4nz9o+D6Mtb9z19un7AEUgghzXNSnTwxntou/NSxdhJvRbtd1LvkvV4F5UTYkGcEg01jxS13BhDwlQmkGQ==}
+  analytica.click@0.15.24:
+    resolution: {integrity: sha512-7aqv+iLqdc2XhvQoRBoSZ2lrbfOYyrw020YVGOm17VrlyZnhpdVbPJnhfOQYpdi+0IJLwp0P5TRA6F1lvkycjw==}
     peerDependencies:
       '@vercel/functions': '>=2.0.0'
       next: '>=13.0.0'
@@ -5404,7 +5404,7 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  analytica.click@0.15.22(@azure/core-client@1.10.1)(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
+  analytica.click@0.15.24(@azure/core-client@1.10.1)(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8):
     dependencies:
       ag-common: 0.0.915(@azure/core-client@1.10.1)(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       web-vitals: 6.2.3
