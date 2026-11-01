@@ -29,7 +29,7 @@
   "devDependencies": {
     "@types/node": "26.6.6",
     "esbuild": "0.28.2",
-    "eslint-config-e7npm": "0.1.73",
+    "eslint-config-e7npm": "0.1.74",
     "oxfmt": "0.75.0",
     "oxlint": "1.90.0",
     "rimraf": "6.1.3"

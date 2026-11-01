@@ -7,6 +7,7 @@ allowBuilds:
   unrs-resolver: true
 minimumReleaseAgeExclude:
   - analytica.click
+  - eslint-config-e7npm@0.1.74
 onlyBuiltDependencies:
   - ag-common
   - esbuild
