@@ -16,7 +16,7 @@ onlyBuiltDependencies:
 catalog:
   '@actions/core': '3.0.1'
   '@types/node': '26.6.6'
-  analytica.click: '0.15.28'
+  analytica.click: '0.15.30'
   cross-env: '10.1.0'
   cross-fetch: '4.1.0'
   esbuild: '0.28.2'
