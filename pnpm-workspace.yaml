@@ -1,6 +1,5 @@
 allowBuilds:
   '@google/genai': false
-  ag-common: true
   esbuild: true
   eslint-config-e7npm: true
   protobufjs: true
@@ -9,14 +8,13 @@ minimumReleaseAgeExclude:
   - analytica.click
   - eslint-config-e7npm
 onlyBuiltDependencies:
-  - ag-common
   - esbuild
   - eslint-config-e7npm
   - unrs-resolver
 catalog:
   '@actions/core': '3.0.1'
   '@types/node': '26.6.6'
-  analytica.click: '0.15.28'
+  analytica.click: '0.15.39'
   cross-env: '10.1.0'
   cross-fetch: '4.1.0'
   esbuild: '0.28.2'
