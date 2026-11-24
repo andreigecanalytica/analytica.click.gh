@@ -196,8 +196,8 @@ catalogs:
       specifier: 26.6.6
       version: 26.6.6
     analytica.click:
-      specifier: 0.15.39
-      version: 0.15.39
+      specifier: 0.15.50
+      version: 0.15.50
     cross-env:
       specifier: 10.1.0
       version: 10.1.0
@@ -208,8 +208,8 @@ catalogs:
       specifier: 0.28.2
       version: 0.28.2
     eslint-config-e7npm:
-      specifier: 0.1.77
-      version: 0.1.77
+      specifier: 0.1.78
+      version: 0.1.78
     oxfmt:
       specifier: 0.77.0
       version: 0.77.0
@@ -235,7 +235,7 @@ importers:
         version: 3.0.1
       analytica.click:
         specifier: 'catalog:'
-        version: 0.15.39(react@19.2.8)
+        version: 0.15.50(react@19.2.8)
       cross-env:
         specifier: 'catalog:'
         version: 10.1.0
@@ -257,7 +257,7 @@ importers:
         version: 0.28.2
       eslint-config-e7npm:
         specifier: 'catalog:'
-        version: 0.1.77(jiti@2.7.0)
+        version: 0.1.78(jiti@2.7.0)
       oxfmt:
         specifier: 'catalog:'
         version: 0.77.0
@@ -1287,8 +1287,8 @@ packages:
   ajv@6.14.0:
     resolution: {integrity: sha512-IWrosm/yrn43eiKqkfkHis7QioDleaXQHdDVPKg0FSwwd/DuvyX79TZnFOnYpB7dcsFAMmtFztZuXPDvSePkFw==}
 
-  analytica.click@0.15.39:
-    resolution: {integrity: sha512-bnQBb93NwxgseWYx9VVi+dXKiNctRflkPUItIw65QVmQPnTraqMH1wUujtGIHxyYS7Aox7IVBDnkItNaNI1YjQ==}
+  analytica.click@0.15.50:
+    resolution: {integrity: sha512-W0QmVfq/NLZI4lpXpF33vry9STIhUDgMJY36Lp1/mgzmosZEdyCc3v+F1VqHXNW06D9c6FoV9Go77dWzvvSzpw==}
     peerDependencies:
       '@vercel/functions': '>=2.0.0'
       next: '>=13.0.0'
@@ -1522,8 +1522,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-e7npm@0.1.77:
-    resolution: {integrity: sha512-O//7BYvnBrLM+PgeH3dup7Jk2+UhsxxBPPVCs8EjcrjO2CjyrelWT4NaM96mSu031vsrc9bYemfl0ITtD+kOMQ==}
+  eslint-config-e7npm@0.1.78:
+    resolution: {integrity: sha512-/QSe/so7EsKUc9kQi3BOZMAQfX+E+tXYdz+IT4C2ZyzOE73fUp/MFZKw7HSCZq4GdOYwrlF/iaGfc/sACdoYEw==}
     hasBin: true
 
   eslint-config-prettier@10.1.8:
@@ -3226,7 +3226,7 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  analytica.click@0.15.39(react@19.2.8):
+  analytica.click@0.15.50(react@19.2.8):
     dependencies:
       web-vitals: 6.2.3
     optionalDependencies:
@@ -3579,7 +3579,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-e7npm@0.1.77(jiti@2.7.0):
+  eslint-config-e7npm@0.1.78(jiti@2.7.0):
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.14.0(jiti@2.7.0))
       eslint: 10.14.0(jiti@2.7.0)

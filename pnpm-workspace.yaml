@@ -14,11 +14,11 @@ onlyBuiltDependencies:
 catalog:
   '@actions/core': '3.0.1'
   '@types/node': '26.6.6'
-  analytica.click: '0.15.39'
+  analytica.click: '0.15.50'
   cross-env: '10.1.0'
   cross-fetch: '4.1.0'
   esbuild: '0.28.2'
-  eslint-config-e7npm: '0.1.77'
+  eslint-config-e7npm: '0.1.78'
   oxfmt: '0.77.0'
   oxlint: '1.92.0'
   rimraf: '6.1.4'
