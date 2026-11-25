@@ -4,7 +4,13 @@ author: 'analytica.click'
 inputs:
   ANALYTICA_TOKEN:
     required: true
-    description: 'your API token'
+    description: 'your site admin API key'
+  DEPLOY_NAME:
+    required: false
+    description: 'set only on the job that deploys: what it puts live, such as web or api'
+  DEPLOY_VERSION:
+    required: false
+    description: 'optional version of the deploy; the date and time (UTC) without one'
   GITHUB_CONTEXT:
     required: false
     description: 'the github context'

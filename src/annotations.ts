@@ -246,12 +246,13 @@ export const collectDescriptions = (
 
 export const getFailureDescription = async ({
   GITHUB_TOKEN,
-  eventName,
+  label,
   github,
   job,
 }: {
   GITHUB_TOKEN?: string;
-  eventName: string;
+  /** Names the build in the action's own log. */
+  label: string;
   github: IGithubContext;
   job?: IJobContext;
 }): Promise<string | undefined> => {
@@ -264,13 +265,13 @@ export const getFailureDescription = async ({
   if (typeof job?.check_run_id !== 'number') {
     // Without a check-run id there is nothing reliable to query, so fall
     // back to failed step names only.
-    core.info(`No check-run id for ${eventName}, falling back to failed steps`);
+    core.info(`No check-run id for ${label}, falling back to failed steps`);
     const stepOnlyJobs = await listRunJobs({ GITHUB_TOKEN, github });
     const stepOnlyFallback = getFailedStepDescription(stepOnlyJobs);
     if (stepOnlyFallback) {
       return stepOnlyFallback;
     }
-    core.info(`No failed steps found for ${eventName}`);
+    core.info(`No failed steps found for ${label}`);
     return undefined;
   }
   const checkRun = await getCheckRun({
@@ -279,7 +280,7 @@ export const getFailureDescription = async ({
     github,
   });
   if (!checkRun || (checkRun.conclusion && checkRun.conclusion !== 'failure')) {
-    core.info(`No failure annotations found for ${eventName}`);
+    core.info(`No failure annotations found for ${label}`);
     return undefined;
   }
   const annotations = await listAnnotationsWithRetry({
@@ -294,6 +295,6 @@ export const getFailureDescription = async ({
   if (combined.length > 0) {
     return truncateDescription(combined.join(' | '));
   }
-  core.info(`No failure annotations or failed steps found for ${eventName}`);
+  core.info(`No failure annotations or failed steps found for ${label}`);
   return undefined;
 };

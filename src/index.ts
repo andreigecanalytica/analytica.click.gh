@@ -2,7 +2,7 @@
 import 'cross-fetch/polyfill';
 import * as core from '@actions/core';
 
-import { runParams } from './main';
+import { getDeploy, runParams } from './main';
 import type { IGithubContext, IJobContext } from './types';
 
 async function run(): Promise<void> {
@@ -24,7 +24,8 @@ async function run(): Promise<void> {
     return;
   }
 
-  return runParams({ ANALYTICA_TOKEN, GITHUB_TOKEN, github, job });
+  const deploy = getDeploy(core.getInput('DEPLOY_NAME'), core.getInput('DEPLOY_VERSION'));
+  return runParams({ ANALYTICA_TOKEN, GITHUB_TOKEN, github, job, deploy });
 }
 
 void run();

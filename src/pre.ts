@@ -2,7 +2,7 @@
 import 'cross-fetch/polyfill';
 import * as core from '@actions/core';
 
-import { runStart } from './main';
+import { getDeploy, runStart } from './main';
 import type { IGithubContext } from './types';
 
 async function run(): Promise<void> {
@@ -17,7 +17,8 @@ async function run(): Promise<void> {
     return;
   }
 
-  return runStart({ ANALYTICA_TOKEN, github });
+  const deploy = getDeploy(core.getInput('DEPLOY_NAME'), core.getInput('DEPLOY_VERSION'));
+  return runStart({ ANALYTICA_TOKEN, github, deploy });
 }
 
 void run();

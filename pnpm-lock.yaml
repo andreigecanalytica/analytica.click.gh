@@ -195,9 +195,6 @@ catalogs:
     '@types/node':
       specifier: 26.6.6
       version: 26.6.6
-    analytica.click:
-      specifier: 0.15.39
-      version: 0.15.39
     cross-env:
       specifier: 10.1.0
       version: 10.1.0
@@ -233,9 +230,6 @@ importers:
       '@actions/core':
         specifier: 'catalog:'
         version: 3.0.1
-      analytica.click:
-        specifier: 'catalog:'
-        version: 0.15.39(react@19.2.8)
       cross-env:
         specifier: 'catalog:'
         version: 10.1.0
@@ -1287,20 +1281,6 @@ packages:
   ajv@6.14.0:
     resolution: {integrity: sha512-IWrosm/yrn43eiKqkfkHis7QioDleaXQHdDVPKg0FSwwd/DuvyX79TZnFOnYpB7dcsFAMmtFztZuXPDvSePkFw==}
 
-  analytica.click@0.15.39:
-    resolution: {integrity: sha512-bnQBb93NwxgseWYx9VVi+dXKiNctRflkPUItIw65QVmQPnTraqMH1wUujtGIHxyYS7Aox7IVBDnkItNaNI1YjQ==}
-    peerDependencies:
-      '@vercel/functions': '>=2.0.0'
-      next: '>=13.0.0'
-      react: ^18.2.0 || ^19.0.0
-    peerDependenciesMeta:
-      '@vercel/functions':
-        optional: true
-      next:
-        optional: true
-      react:
-        optional: true
-
   aria-query@5.3.2:
     resolution: {integrity: sha512-COROpnaoap1E2F000S62r6A60uHZnmlvomhfyT2DlTcrY1OrBKn2UhH7qn5wTC9zMvD0AY7csdPSNwKP+7WiQw==}
     engines: {node: '>= 0.4'}
@@ -2286,10 +2266,6 @@ packages:
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  react@19.2.8:
-    resolution: {integrity: sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw==}
-    engines: {node: '>=0.10.0'}
-
   reflect.getprototypeof@1.0.10:
     resolution: {integrity: sha512-00o4I+DVrefhv+nX0ulyi3biSHCPDe+yLv5o/p6d/UVlirijB8E16FtfwSAi4g3tcqrQ4lRAqQSoFEZJehYEcw==}
     engines: {node: '>= 0.4'}
@@ -2502,9 +2478,6 @@ packages:
   walk-up-path@4.0.0:
     resolution: {integrity: sha512-3hu+tD8YzSLGuFYtPRb48vdhKMi0KQV5sn+uWr8+7dMEq/2G/dtLrdDinkLjqq5TIbIBjYJ4Ax/n3YiaW7QM8A==}
     engines: {node: 20 || >=22}
-
-  web-vitals@6.2.3:
-    resolution: {integrity: sha512-Dmy+vdO1UPMqXiAtZSNayhl4f794Bxfd94W4HIj2HlYtczEQfEOon969memlcpcHrTuOKLa5baFjX7WbgmOq+A==}
 
   webidl-conversions@3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
@@ -3225,12 +3198,6 @@ snapshots:
       fast-json-stable-stringify: 2.1.0
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
-
-  analytica.click@0.15.39(react@19.2.8):
-    dependencies:
-      web-vitals: 6.2.3
-    optionalDependencies:
-      react: 19.2.8
 
   aria-query@5.3.2: {}
 
@@ -4453,9 +4420,6 @@ snapshots:
 
   react-is@16.13.1: {}
 
-  react@19.2.8:
-    optional: true
-
   reflect.getprototypeof@1.0.10:
     dependencies:
       call-bind: 1.0.8
@@ -4757,8 +4721,6 @@ snapshots:
       punycode: 2.3.0
 
   walk-up-path@4.0.0: {}
-
-  web-vitals@6.2.3: {}
 
   webidl-conversions@3.0.1: {}
 
